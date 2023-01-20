@@ -48,7 +48,7 @@ error_symbol = "[](238)"
 [git_branch]
 symbol = " "
 format = "on [$symbol$branch]($style)"
-truncation_length = 4
+truncation_length = 10
 truncation_symbol = "…"
 style = "bold cyan"
 
@@ -57,17 +57,17 @@ format = '[\($all_status$ahead_behind\)]($style)'
 style = "cyan"
 
 up_to_date = " "
-ahead = " ${count}"
-diverged = " ${ahead_count} ${behind_count}"
-behind = " ${count}"
+ahead = "${count} "
+diverged = "${ahead_count} ${behind_count} "
+behind = "${count} "
 
-conflicted = " " 
+untracked = "${count} "
+conflicted = "${count}⚠" 
+modified = "${count} "
+staged = "${count} "
+renamed = "${count}襁 "
+deleted = "${count} "
 stashed = " "
-modified = " "
-untracked = " "
-staged = " "
-renamed = "襁 "
-deleted = " "
 
 [python]
 symbol = " "
