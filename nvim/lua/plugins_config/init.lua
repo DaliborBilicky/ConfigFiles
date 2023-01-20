@@ -1,0 +1,6 @@
+require("plugins_config.lualine")
+require("plugins_config.nvim-tree")
+require("plugins_config.gruvbox")
+require("plugins_config.indent-blankline")
+require("plugins_config.treesitter")
+require("plugins_config.nvim-base16")
