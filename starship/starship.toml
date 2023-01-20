@@ -55,17 +55,17 @@ style = "bold cyan"
 [git_status]
 format = '[\($all_status$ahead_behind\)]($style)'
 style = "cyan"
-conflicted = " "
-up_to_date = " "
-untracked = " "
+conflicted = ""
+up_to_date = ""
+untracked = ""
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
-stashed = " "
-modified = " "
+stashed = ""
+modified = ""
 staged = '[++\($count\)](style)'
-renamed = "襁 "
-deleted = " "
+renamed = "襁"
+deleted = ""
 
 [python]
 symbol = " "
