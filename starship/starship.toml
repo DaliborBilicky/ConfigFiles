@@ -14,8 +14,6 @@ $cmd_duration $time\
 $line_break\
 [╰─](238)$character"""
 
-
-
 [fill]
 symbol = " "
 
@@ -37,7 +35,7 @@ show_always = true
 use_os_path_sep = false
 truncation_length = 3
 truncation_symbol = "…/"
-home_symbol = " ~"
+home_symbol = " ~"
 read_only_style = "red"
 read_only = " "
 style = "bold green"
@@ -51,23 +49,25 @@ error_symbol = "[](238)"
 symbol = " "
 format = "on [$symbol$branch]($style)"
 truncation_length = 4
-truncation_symbol = "…/"
+truncation_symbol = "…"
 style = "bold cyan"
 
 [git_status]
 format = '[\($all_status$ahead_behind\)]($style)'
 style = "cyan"
-conflicted = ""
-up_to_date = ""
-untracked = ""
-ahead = "⇡${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-behind = "⇣${count}"
-stashed = ""
-modified = ""
-staged = '[++\($count\)](style)'
-renamed = "襁"
-deleted = ""
+
+up_to_date = " "
+ahead = " ${count}"
+diverged = " ${ahead_count} ${behind_count}"
+behind = " ${count}"
+
+conflicted = " " 
+stashed = " "
+modified = " "
+untracked = " "
+staged = " "
+renamed = "襁 "
+deleted = " "
 
 [python]
 symbol = " "
