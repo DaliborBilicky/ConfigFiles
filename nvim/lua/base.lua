@@ -20,7 +20,7 @@ o.history = 50
 o.smartindent = true
 o.smartcase = true
 o.showcmd = true
-o.colorcolumn = "80"
+-- o.colorcolumn = "80"
 o.updatetime = 50
 
 o.backup = false
