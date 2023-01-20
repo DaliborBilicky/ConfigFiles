@@ -56,10 +56,10 @@ style = "bold cyan"
 format = '[\($all_status$ahead_behind\)]($style)'
 style = "cyan"
 
-up_to_date = " "
-ahead = "${count} "
-diverged = "${ahead_count} ${behind_count} "
-behind = "${count} "
+up_to_date = " "
+ahead = "${count} "
+diverged = "${ahead_count} ${behind_count} "
+behind = "${count} "
 
 untracked = "${count} "
 conflicted = "${count}⚠" 
