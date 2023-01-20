@@ -18,6 +18,9 @@
     "editor.foldingImportsByDefault": false,
     "editor.renderLineHighlight": "all",
     "window.zoomLevel": -0.5,
+    
+    
+    
     // Terminal
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
     "terminal.integrated.fontSize": 18,
