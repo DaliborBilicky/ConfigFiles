@@ -25,9 +25,6 @@ Set-Alias vim nvim
 Set-Alias nf neofetch
 
 
-Invoke-Expression (&'C:\Program Files\starship\bin\starship.exe' init powershell --print-full-init | Out-String)
-
-
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
 # Be aware that if you are missing these lines from your profile, tab completion
@@ -37,3 +34,5 @@ $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
+
+Invoke-Expression (&'C:\Program Files\starship\bin\starship.exe' init powershell --print-full-init | Out-String)

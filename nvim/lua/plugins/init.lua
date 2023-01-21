@@ -1,0 +1,5 @@
+require("plugins.gruvbox")
+require("plugins.lualine")
+require("plugins.nvim-tree")
+require("plugins.treesitter")
+require("plugins.indent-blankline")
