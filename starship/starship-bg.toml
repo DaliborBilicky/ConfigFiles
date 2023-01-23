@@ -26,7 +26,6 @@ bash_indicator = ' '
 powershell_indicator = ' '
 format = '[](fg:green)[$indicator]($style)'
 
-
 [username]
 disabled = false
 show_always = true
