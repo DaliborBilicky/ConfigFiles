@@ -10,7 +10,8 @@ $git_status\
 $fill\
 $java\
 $python\
-$cmd_duration $time\ 
+$cmd_duration\ 
+$time\ 
 $line_break\
 [╰─](238)$character"""
 
@@ -72,15 +73,15 @@ stashed = " "
 [python]
 symbol = " "
 style = "blue"
-format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\) )]($style)'
+format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 
 [java]
 symbol = ""
 style = "bold red"
-format = "[${symbol} (${version} )]($style)"
+format = "[${symbol} (${version})]($style) "
 
 [cmd_duration]
-format = "[$duration]($style)"
+format = "[$duration]($style) "
 style = "yellow"
 
 [time]
