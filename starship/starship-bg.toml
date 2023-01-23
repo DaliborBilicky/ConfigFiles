@@ -54,7 +54,7 @@ format = " [](fg:cyan)[$symbol$branch]($style)"
 style = "fg:0 bg:bright-cyan"
 
 #github
-up_to_date = ""
+up_to_date = "﫟"
 ahead = "${count} "
 diverged = "${ahead_count} ${behind_count} "
 behind = "${count} "
@@ -71,12 +71,12 @@ stashed = " "
 format = '[](fg:cyan bg:bright-cyan)[\($all_status$ahead_behind\)]($style)[](fg:bright-cyan)'
 
 [python]
-style = "bg:blue"
+style = "fg:0 bg:blue"
 symbol = " "
 format = '[](fg:blue)[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)[](fg:blue)'
 
 [java]
-style = "bg:red"
+style = "fg:0 bg:red"
 symbol = " "
 format = " [](fg:red)[${symbol}(${version})]($style)[](fg:red)"
 
