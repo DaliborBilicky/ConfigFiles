@@ -1,0 +1,100 @@
+add_newline = true
+
+format = """
+$shell\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$java\
+$python\ 
+$lua\
+$cmd_duration\
+$time\ 
+$line_break\
+$character"""
+
+[fill]
+symbol = " "
+
+## Prompt with bg colors
+[shell]
+disabled = false
+style = 'bg:green fg:0'
+bash_indicator = ' '
+powershell_indicator = ' '
+format = '[](fg:green)[$indicator]($style)'
+
+
+[username]
+disabled = false
+show_always = true
+style_user = 'bg:green fg:0'
+style_root = 'bg:green fg:white'
+format = '(bg:gree)[$user]($style)'
+
+[directory]
+use_os_path_sep = false
+truncation_length = 3
+style = "fg:0 bg:bright-green"
+truncation_symbol = "…/"
+home_symbol = " ~"
+read_only_style = "fg:0 bg:bright-green"
+read_only = " "
+format = "[](fg:green bg:bright-green)[$path]($style)[$read_only]($read_only_style)[](fg:bright-green)"
+
+[git_branch]
+truncation_length = 10
+style = "fg:0 bg:cyan"
+truncation_symbol = "…"
+symbol = " "
+format = " [](fg:cyan)[$symbol$branch]($style)"
+
+[git_status]
+style = "fg:0 bg:bright-cyan"
+
+#github
+up_to_date = "﫟"
+ahead = "${count} "
+diverged = "${ahead_count} ${behind_count} "
+behind = "${count} "
+
+#local
+untracked = "${count} "
+conflicted = "${count}⚠" 
+modified = "${count} "
+staged = "${count} "
+renamed = "${count}襁 "
+deleted = "${count} "
+stashed = " "
+
+format = '[](fg:cyan bg:bright-cyan)[\($all_status$ahead_behind\)]($style)[](fg:bright-cyan)'
+
+[python]
+style = "bg:blue"
+symbol = " "
+format = '[](fg:blue)[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)[](fg:blue)'
+
+[java]
+style = "bg:red"
+symbol = " "
+format = " [](fg:red)[${symbol}(${version})]($style)[](fg:red)"
+
+[lua]
+style = "fg:0 bg:blue"
+symbol = "⏾ "
+format = " [](fg:blue)[${symbol}(${version})]($style)[](fg:blue)"
+
+[cmd_duration]
+style = "fg:0 bg:yellow"
+format = " [](fg:yellow)[$duration]($style)[](fg:yellow)"
+
+[time]
+disabled = false
+style = "fg:0 bg:purple"
+format = " [](fg:purple)[$time]($style)[](fg:purple)"
+
+[character]
+success_symbol = "[ ╰](8)"
+error_symbol = "[ ╰](8)"

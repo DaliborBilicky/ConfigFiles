@@ -1,0 +1,98 @@
+add_newline = true
+
+format = """
+$shell\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$java\
+$python\ 
+$lua\
+$cmd_duration\
+$time\ 
+$line_break\
+$character"""
+
+[fill]
+symbol = " "
+
+## Plain prompt with fg colors
+[shell]
+disabled = false
+style = 'fg:white'
+bash_indicator = '[╭╴](238)'
+powershell_indicator = '[╭╴](238)'
+
+[username]
+disabled = false
+show_always = true
+style_user = 'fg:bright-purple'
+style_root = 'fg:bright-red'
+format = '[$user]($style)'
+
+[directory]
+use_os_path_sep = false
+truncation_length = 3
+style = "fg:bright-green"
+truncation_symbol = "…/"
+home_symbol = " ~"
+read_only_style = "fg:red"
+read_only = " "
+format = " at [$path]($style)[$read_only]($read_only_style)"
+
+[git_branch]
+truncation_length = 10
+style = "fg:bright-cyan"
+truncation_symbol = "…"
+symbol = " "
+format = " on [$symbol$branch]($style)"
+
+[git_status]
+style = "cyan"
+
+#github
+up_to_date = "﫟"
+ahead = "${count} "
+diverged = "${ahead_count} ${behind_count} "
+behind = "${count} "
+
+#local
+untracked = "${count} "
+conflicted = "${count}⚠" 
+modified = "${count} "
+staged = "${count} "
+renamed = "${count}襁 "
+deleted = "${count} "
+stashed = " "
+
+format = '[\($all_status$ahead_behind\)]($style)'
+
+[python]
+style = "fg:blue"
+symbol = " "
+format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)'
+
+[java]
+style = "fg:bright-red"
+symbol = ""
+format = " [${symbol} (${version})]($style)"
+
+[lua]
+style = "fg:blue"
+symbol = "⏾ "
+format = " [${symbol} (${version})]($style)"
+
+[cmd_duration]
+style = "fg:yellow"
+format = " [$duration]($style)"
+
+[time]
+disabled = false
+style = "fg:white"
+format = " [$time]($style)"
+
+[character]
+success_symbol = "[╰](238)"
+error_symbol = "[╰](238)"
