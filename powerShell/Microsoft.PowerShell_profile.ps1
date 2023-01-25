@@ -10,7 +10,6 @@ function lsd_a {
 function lsd_al {
     lsd -al
 }
-
 function invoke_tere() {
     $result = . (Get-Command -CommandType Application tere) $args
     if ($result) {
@@ -18,11 +17,16 @@ function invoke_tere() {
     }
 }
 
+function gitSyncConfig() {
+    git add .
+    git commit -m "nothing"
+    git push origin main
+}
+
 Set-Alias cdll invoke_tere
 Set-Alias ls lsd_a
 Set-Alias ll lsd_al
 Set-Alias vim nvim
-Set-Alias nf neofetch
 
 
 # Import the Chocolatey Profile that contains the necessary code to enable
