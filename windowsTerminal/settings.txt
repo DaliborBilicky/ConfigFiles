@@ -4,37 +4,11 @@
     "actions": 
     [
         {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            }
-        },
-        {
-            "command": "paste"
-        },
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
-        },
-        {
             "command": "unbound",
-            "keys": "ctrl+c"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+v"
+            "keys": "win+sc(41)"
         }
     ],
+    "alwaysShowTabs": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
@@ -44,15 +18,16 @@
     {
         "defaults": 
         {
-            "colorScheme": "GruvboxDark",
+            "colorScheme": "Gruvbox Dark",
             "font": 
             {
                 "face": "JetBrainsMono Nerd Font",
-                "size": 16,
+                "size": 16.0,
                 "weight": "semi-bold"
             },
             "opacity": 90,
-            "scrollbarState": "hidden"
+            "scrollbarState": "hidden",
+            "useAcrylic": false
         },
         "list": 
         [
@@ -75,7 +50,8 @@
                 "name": "Git Bash",
                 "opacity": 90,
                 "padding": "8",
-                "source": "Git"
+                "source": "Git",
+                "useAcrylic": false
             },
             {
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
@@ -94,13 +70,6 @@
                 "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "cursorShape": "bar",
-                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
             }
         ]
     },
@@ -168,11 +137,11 @@
             "cyan": "#689D6A",
             "foreground": "#EBDBB2",
             "green": "#98971A",
-            "name": "GruvboxDark",
+            "name": "Gruvbox Dark",
             "purple": "#B16286",
             "red": "#CC241D",
             "selectionBackground": "#665C54",
-            "white": "#EBDBB2",
+            "white": "#A89984",
             "yellow": "#D79921"
         },
         {
@@ -361,6 +330,9 @@
         }
     ],
     "showTabsInTitlebar": true,
+    "showTerminalTitleInTitlebar": true,
+    "theme": "system",
+    "themes": [],
     "useAcrylicInTabRow": false,
     "windowingBehavior": "useNew"
 }

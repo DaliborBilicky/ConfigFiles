@@ -21,7 +21,7 @@ symbol = " "
 ## Plain prompt with fg colors
 [shell]
 disabled = false
-style = 'fg:white'
+style = 'fg:bright-white'
 bash_indicator = '[╭╴](238)'
 powershell_indicator = '[╭╴](238)'
 
@@ -90,7 +90,7 @@ format = " [$duration]($style)"
 
 [time]
 disabled = false
-style = "fg:white"
+style = "fg:bright-white"
 format = " [$time]($style)"
 
 [character]
