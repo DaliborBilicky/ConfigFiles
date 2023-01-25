@@ -9,6 +9,12 @@ function cdll() {
     [ -n "$result" ] && cd -- "$result"
 }
 
+function gitSyncConfig() {
+    git add .
+    git commit -m "nothing"
+    git push origin main
+}
+
 function colormap() {
 for bg in 48 ; do # Foreground / Background
     for color in {0..255} ; do # Colors
