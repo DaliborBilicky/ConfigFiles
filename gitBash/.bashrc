@@ -3,8 +3,6 @@ alias ls='lsd -a'
 alias ll='lsd -la'
 alias vim='nvim'
 alias nf='neofetch'
-alias wslsd='wsl --shutdown'
-
 
 function cdll() {
     local result=$(command tere -m ctrl-x:Exit "$@")
@@ -24,7 +22,6 @@ for bg in 48 ; do # Foreground / Background
     echo # New line
 done
 }
-
 
 #StarShip start
 eval "$(starship init bash)"
