@@ -39,8 +39,8 @@ style = "fg:bright-green"
 truncation_symbol = "…/"
 home_symbol = " ~"
 read_only_style = "fg:red"
-read_only = " "
-format = " at [$path]($style)[$read_only]($read_only_style)"
+read_only = " "
+format = " at [$read_only]($read_only_style)[$path]($style)"
 
 [git_branch]
 truncation_length = 10
