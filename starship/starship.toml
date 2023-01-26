@@ -1,5 +1,6 @@
 add_newline = true
 
+
 format = """
 $shell\
 $username\
@@ -15,15 +16,18 @@ $time\
 $line_break\
 $character"""
 
+
+# Settings which are important for me every time.
 [fill]
 symbol = " "
 
-## Plain prompt with fg colors
+
 [shell]
 disabled = false
 style = 'fg:bright-white'
-bash_indicator = '[╭╴](238)'
-powershell_indicator = '[╭╴](238)'
+bash_indicator = '[╭╴](fg:238)'
+powershell_indicator = '[╭╴](fg:238)'
+
 
 [username]
 disabled = false
@@ -31,6 +35,7 @@ show_always = true
 style_user = 'fg:bright-purple'
 style_root = 'fg:bright-red'
 format = '[$user]($style)'
+
 
 [directory]
 use_os_path_sep = false
@@ -42,6 +47,7 @@ read_only_style = "fg:red"
 read_only = " "
 format = " at [$read_only]($read_only_style)[$path]($style)"
 
+
 [git_branch]
 truncation_length = 10
 style = "fg:bright-cyan"
@@ -49,16 +55,17 @@ truncation_symbol = "…"
 symbol = " "
 format = " on [$symbol$branch]($style)"
 
-[git_status]
-style = "cyan"
 
-#github
+[git_status]
+style = "fg:cyan"
+
+# Github
 up_to_date = "﫟"
 ahead = "${count} "
 diverged = "${ahead_count} ${behind_count} "
 behind = "${count} "
 
-#local
+# Local PC
 untracked = "${count} "
 conflicted = "${count}⚠" 
 modified = "${count} "
@@ -69,30 +76,37 @@ stashed = " "
 
 format = '[\($all_status$ahead_behind\)]($style)'
 
-[python]
-style = "fg:blue"
-symbol = " "
-format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)'
-
-[java]
-style = "fg:bright-red"
-symbol = ""
-format = " [${symbol} (${version})]($style)"
-
-[lua]
-style = "fg:blue"
-symbol = "⏾ "
-format = " [${symbol} (${version})]($style)"
 
 [cmd_duration]
 style = "fg:yellow"
 format = " [$duration]($style)"
+
 
 [time]
 disabled = false
 style = "fg:bright-white"
 format = " [$time]($style)"
 
+
 [character]
-success_symbol = "[╰](238)"
-error_symbol = "[╰](238)"
+success_symbol = "[╰╴](fg:238)[❱](fg:bright-green)"
+error_symbol = "[╰╴](fg:238)[❱](fg:bright-red)"
+
+
+# Settings to add some more functionality.
+[python]
+style = "fg:blue"
+symbol = " "
+format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)'
+
+
+[java]
+style = "fg:bright-red"
+symbol = ""
+format = " [${symbol} (${version})]($style)"
+
+
+[lua]
+style = "fg:blue"
+symbol = "⏾ "
+format = " [${symbol} (${version})]($style)"
