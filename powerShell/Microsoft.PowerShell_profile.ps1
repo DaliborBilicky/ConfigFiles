@@ -19,7 +19,7 @@ function invoke_tere() {
 
 function gitSyncConfig() {
     git add .
-    git commit -m "nothing"
+    git commit -m
     git push origin main
 }
 
