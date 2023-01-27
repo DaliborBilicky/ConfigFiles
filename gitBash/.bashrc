@@ -1,6 +1,6 @@
 # Alias
-alias ls='lsd -a'
-alias ll='lsd -la'
+alias ls='lsd -a --group-directories-first'
+alias ll='lsd -la --group-directories-first'
 alias vim='nvim'
 alias nf='neofetch'
 
@@ -11,7 +11,7 @@ function cdll() {
 
 function gitSyncConfig() {
     git add .
-    git commit -m "nothing"
+    git commit
     git push origin main
 }
 
