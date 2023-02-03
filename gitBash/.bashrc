@@ -9,7 +9,7 @@ function cdll() {
     [ -n "$result" ] && cd -- "$result"
 }
 
-function gitSyncConfig() {
+function gitSync() {
     git add .
     git commit
     git push origin main

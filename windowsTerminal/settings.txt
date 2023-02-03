@@ -8,6 +8,7 @@
             "keys": "win+sc(41)"
         }
     ],
+    "alwaysOnTop": false,
     "alwaysShowTabs": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
@@ -25,7 +26,7 @@
                 "size": 16.0,
                 "weight": "semi-bold"
             },
-            "opacity": 90,
+            "opacity": 85,
             "scrollbarState": "hidden",
             "useAcrylic": false
         },
@@ -44,11 +45,12 @@
                 "name": "Command Prompt"
             },
             {
+                "colorScheme": "Gruvbox Dark",
                 "elevate": false,
                 "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
                 "hidden": false,
                 "name": "Git Bash",
-                "opacity": 90,
+                "opacity": 85,
                 "padding": "8",
                 "source": "Git",
                 "useAcrylic": false
@@ -331,6 +333,7 @@
     ],
     "showTabsInTitlebar": true,
     "showTerminalTitleInTitlebar": true,
+    "tabWidthMode": "equal",
     "theme": "system",
     "themes": [],
     "useAcrylicInTabRow": false,
