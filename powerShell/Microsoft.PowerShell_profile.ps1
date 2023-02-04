@@ -1,10 +1,10 @@
 Write-Host ""
-Write-Host "██████╗  █████╗  ██╗       ██╗███████╗██████╗   ██████╗██╗  ██╗███████╗██╗     ██╗     " -ForegroundColor DarkRed
-Write-Host "██╔══██╗██╔══██╗ ██║  ██╗  ██║██╔════╝██╔══██╗ ██╔════╝██║  ██║██╔════╝██║     ██║     " -ForegroundColor DarkYellow
-Write-Host "██████╔╝██║  ██║ ╚██╗████╗██╔╝█████╗  ██████╔╝ ╚█████╗ ███████║█████╗  ██║     ██║     " -ForegroundColor DarkGreen
-Write-Host "██╔═══╝ ██║  ██║  ████╔═████║ ██╔══╝  ██╔══██╗  ╚═══██╗██╔══██║██╔══╝  ██║     ██║     " -ForegroundColor DarkCyan
-Write-Host "██║     ╚█████╔╝  ╚██╔╝ ╚██╔╝ ███████╗██║  ██║ ██████╔╝██║  ██║███████╗███████╗███████╗" -ForegroundColor DarkBlue
-Write-Host "╚═╝      ╚════╝    ╚═╝   ╚═╝  ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝" -ForegroundColor DarkMagenta
+Write-Host "██████╗  █████╗ ██╗       ██╗███████╗██████╗   ██████╗██╗  ██╗███████╗██╗     ██╗     " -ForegroundColor DarkRed
+Write-Host "██╔══██╗██╔══██╗██║  ██╗  ██║██╔════╝██╔══██╗ ██╔════╝██║  ██║██╔════╝██║     ██║     " -ForegroundColor DarkYellow
+Write-Host "██████╔╝██║  ██║╚██╗████╗██╔╝█████╗  ██████╔╝ ╚█████╗ ███████║█████╗  ██║     ██║     " -ForegroundColor DarkGreen
+Write-Host "██╔═══╝ ██║  ██║ ████╔═████║ ██╔══╝  ██╔══██╗  ╚═══██╗██╔══██║██╔══╝  ██║     ██║     " -ForegroundColor DarkCyan
+Write-Host "██║     ╚█████╔╝ ╚██╔╝ ╚██╔╝ ███████╗██║  ██║ ██████╔╝██║  ██║███████╗███████╗███████╗" -ForegroundColor DarkBlue
+Write-Host "╚═╝      ╚════╝   ╚═╝   ╚═╝  ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝" -ForegroundColor DarkMagenta
 
 # Alias
 function lsd_a {
