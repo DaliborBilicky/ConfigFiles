@@ -25,8 +25,8 @@ symbol = " "
 [shell]
 disabled = false
 style = 'fg:bright-white'
-bash_indicator = '[╭╴](fg:238)'
-powershell_indicator = '[╭╴](fg:238)'
+bash_indicator = '[╭╴](fg:240)'
+powershell_indicator = '[╭╴](fg:240)'
 
 
 [username]
@@ -89,8 +89,8 @@ format = " [$time]($style)"
 
 
 [character]
-success_symbol = "[╰╴](fg:238)[❱](fg:bright-green)"
-error_symbol = "[╰╴](fg:238)[❱](fg:bright-red)"
+success_symbol = "[╰╴](fg:240)[❱](fg:bright-green)"
+error_symbol = "[╰╴](fg:240)[❱](fg:bright-red)"
 
 
 # Settings to add some more functionality.

@@ -20,13 +20,14 @@
         "defaults": 
         {
             "colorScheme": "Gruvbox Dark",
+            "cursorShape": "bar",
             "font": 
             {
                 "face": "JetBrainsMono Nerd Font",
                 "size": 16.0,
                 "weight": "semi-bold"
             },
-            "opacity": 90,
+            "opacity": 92,
             "scrollbarState": "hidden",
             "useAcrylic": false
         },
@@ -50,7 +51,7 @@
                 "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
                 "hidden": false,
                 "name": "Git Bash",
-                "opacity": 90,
+                "opacity": 92,
                 "padding": "8",
                 "source": "Git",
                 "useAcrylic": false
@@ -125,8 +126,8 @@
             "yellow": "#C19C00"
         },
         {
-            "background": "#1B1B1B",
-            "black": "#1B1B1B",
+            "background": "#1D2021",
+            "black": "#1D2021",
             "blue": "#458588",
             "brightBlack": "#928374",
             "brightBlue": "#83A598",
