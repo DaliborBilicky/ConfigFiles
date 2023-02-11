@@ -15,6 +15,7 @@
     "defaultProfile": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
     "initialCols": 88,
     "initialRows": 22,
+    "launchMode": "maximized",
     "profiles": 
     {
         "defaults": 
@@ -24,9 +25,10 @@
             "font": 
             {
                 "face": "JetBrainsMono Nerd Font",
-                "size": 16.0,
+                "size": 20.0,
                 "weight": "semi-bold"
             },
+            "intenseTextStyle": "bright",
             "opacity": 92,
             "scrollbarState": "hidden",
             "useAcrylic": false
@@ -48,8 +50,15 @@
             {
                 "colorScheme": "Gruvbox Dark",
                 "elevate": false,
+                "experimental.retroTerminalEffect": false,
+                "font": 
+                {
+                    "size": 20.0,
+                    "weight": "semi-bold"
+                },
                 "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
                 "hidden": false,
+                "intenseTextStyle": "bright",
                 "name": "Git Bash",
                 "opacity": 92,
                 "padding": "8",
