@@ -5,6 +5,7 @@ $username\
 $directory\
 $git_branch\
 $git_commit\
+$git_status\
 $git_state\
 $python\
 $java\
@@ -51,6 +52,22 @@ tag_disabled = true
 disabled = false
 
 
+[git_status]
+style = 'bold green'
+conflicted = '⚠'
+up_to_date = ''
+untracked = ''
+ahead = '⇡${count}'
+diverged = '⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+stashed = '⊞'
+modified = '*'
+staged = '+$count'
+renamed = '~'
+deleted = ''
+format = '([\($all_status$ahead_behind\)](bright-cyan))'
+
+
 [git_state]
 rebase = 'REBASING'
 merge = 'MERGING'
@@ -72,7 +89,7 @@ format = ' via [ $version](bright-red)'
 
 
 [lua]
-format = ' via [⏾ $version)](blue)'
+format = ' via [⏾ $version](blue)'
 
 
 [c]
