@@ -1,0 +1,88 @@
+add_newline = true
+
+format = """
+$username\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$python\
+$java\
+$c\
+$nodejs\
+$lua\
+$line_break\
+$character\
+"""
+
+
+[username]
+style_user = 'bright-yellow'
+style_root = 'red'
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
+
+[directory]
+truncation_length = 3
+truncation_symbol = '…/'
+home_symbol = '~'
+read_only = ' '
+format = ' in [$read_only](red)[$path](bright-green)'
+disabled = false
+use_os_path_sep = false
+truncate_to_repo = false
+
+
+[git_branch]
+truncation_length = 8
+truncation_symbol = '…'
+format = ' on [$branch](bright-cyan)'
+only_attached = false
+disabled = false
+
+
+[git_commit]
+commit_hash_length = 7
+format = ' on [$hash](bright-cyan)'
+only_detached = true
+tag_disabled = true
+disabled = false
+
+
+[git_state]
+rebase = 'REBASING'
+merge = 'MERGING'
+revert = 'REVERTING'
+cherry_pick = 'CHERRY-PICKING'
+bisect = 'BISECTING'
+am = 'AM'
+am_or_rebase = 'AM/REBASE'
+format = '[\($state\)](cyan)'
+disabled = false
+
+
+[python]
+format = ' via [ $version(\($virtualenv\))](bright-yellow)'
+
+
+[java]
+format = ' via [ $version](bright-red)'
+
+
+[lua]
+format = ' via [⏾ $version)](blue)'
+
+
+[c]
+format = ' via [ $version](bright-blue)'
+
+
+[nodejs]
+format = ' via [ $version](bright-green)'
+
+
+[character]
+success_symbol = '[](white)'
+error_symbol = '[](white)'

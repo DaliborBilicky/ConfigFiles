@@ -1,0 +1,94 @@
+{
+    "workbench.iconTheme": "gruvbox-material-icon-theme",
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 20,
+    "editor.fontWeight": 400,
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font SemiBold",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontWeight": 400,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [79],
+    "window.zoomLevel": -0.25,
+    "java.codeGeneration.useBlocks": true,
+    "color-highlight.markRuler": false,
+    "editor.lineHeight": 1.6,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "variable.other.constant.property",
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            }
+        ]
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "java.codeGeneration.generateComments": true,
+    "java.codeGeneration.toString.codeStyle": "STRING_FORMAT",
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontLigatures": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorWidth": 2,
+    "java.inlayHints.parameterNames.enabled": "none",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "workbench.editorAssociations": {
+        "*.bat": "default",
+        "*.bin": "default"
+    },
+    "editor.formatOnSave": true,
+    "black-formatter.showNotifications": "always",
+    "black-formatter.args": ["--line-length", "79"],
+    "C_Cpp.default.cppStandard": "c++20",
+    "debug.terminal.clearBeforeReusing": true,
+    "editor.cursorWidth": 3,
+    "cSpell.userWords": ["setext"],
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "security.allowedUNCHosts": ["wsl.localhost"],
+    "java.settings.url": ".vscode/settings.prefs",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "workbench.colorTheme": "Gruvbox",
+    "workbench.editor.editorActionsLocation": "titleBar",
+    "workbench.tips.enabled": false,
+    "workbench.startupEditor": "none",
+    "workbench.layoutControl.enabled": false,
+    "explorer.autoReveal": false,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 2,
+    "workbench.editor.showTabs": "none",
+    "workbench.editor.enablePreview": false,
+    "workbench.activityBar.location": "hidden",
+    "window.commandCenter": false,
+    "cSpell.enableFiletypes": ["powershell"],
+    "breadcrumbs.enabled": false,
+    "vim.smartRelativeLine": true,
+    "editor.lineNumbers": "relative",
+    "prettier.tabWidth": 4,
+    "vim.hlsearch": true,
+    "vim.leader": "<Space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // NICE TO HAVE
+        {
+            "before": ["leader", "p"],
+            "commands": ["editor.action.showDefinitionPreviewHover"]
+        },
+        {
+            // go to the definition
+            "before": ["leader", "j"],
+            "after": ["g", "d"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // Stay in visual mode while indenting
+        { "before": ["S-tab"], "commands": ["editor.action.outdentLines"] },
+        { "before": ["tab"], "commands": ["editor.action.indentLines"] },
+        // Move selected lines while staying in visual mode
+        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
+    ]
+}

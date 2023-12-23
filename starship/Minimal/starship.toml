@@ -1,0 +1,91 @@
+add_newline = true
+
+format = """
+$os\
+$python\
+$username\
+$shell\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$character\
+"""
+
+
+[os]
+format = '[\[](fg:red)'
+disabled = false
+
+
+[python]
+detect_files = []
+detect_folders = []
+detect_extensions = []
+style = 'fg:#fe8019'
+format = '[\($virtualenv\)]($style)'
+disabled = false
+
+
+[username]
+style_user = 'fg:bright-yellow'
+style_root = 'fg:bright-red'
+format = '[$user]($style)[@](fg:bright-green)'
+disabled = false
+show_always = true
+
+
+[shell]
+bash_indicator = 'Bash'
+powershell_indicator = 'Pwsh'
+style = 'fg:bright-cyan'
+disabled = false
+
+
+[directory]
+truncation_length = 2
+truncation_symbol = '…/'
+home_symbol = '~'
+read_only = ''
+style = 'fg:bright-blue'
+read_only_style = 'fg:red'
+format = '[$read_only]($read_only_style)[$path]($style)'
+disabled = false
+use_os_path_sep = false
+truncate_to_repo = false
+
+
+[git_branch]
+truncation_length = 8
+truncation_symbol = '…'
+style = 'fg:bright-purple'
+format = '[\($branch\)]($style)'
+only_attached = false
+disabled = false
+
+
+[git_commit]
+commit_hash_length = 7
+style = 'fg:bright-purple'
+format = '[\($hash\)]($style)'
+only_detached = true
+tag_disabled = true
+disabled = false
+
+
+[git_state]
+rebase = 'REBASING'
+merge = 'MERGING'
+revert = 'REVERTING'
+cherry_pick = 'CHERRY-PICKING'
+bisect = 'BISECTING'
+am = 'AM'
+am_or_rebase = 'AM/REBASE'
+style = 'fg:purple'
+format = '[\($state\)]($style)'
+disabled = false
+
+
+[character]
+success_symbol = '[\]](fg:red)'
+error_symbol = '[\]](fg:red)'
