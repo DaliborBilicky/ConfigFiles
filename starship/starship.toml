@@ -103,3 +103,4 @@ format = ' via [ $version](bright-green)'
 [character]
 success_symbol = '[](white)'
 error_symbol = '[](white)'
+vimcmd_symbol = '[](white)'

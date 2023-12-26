@@ -1,67 +1,38 @@
-require('nvim-treesitter.configs').setup {
-    -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'lua', 'python', 'java', 'vim' },
-
-
-    highlight = { enable = true },
-    indent = { enable = true, disable = { 'python' } },
-    incremental_selection = {
-        enable = true,
-        keymaps = {
-            init_selection = '<c-space>',
-            node_incremental = '<c-space>',
-            scope_incremental = '<c-s>',
-            node_decremental = '<c-backspace>',
-        },
+return {
+    {"nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+        require("nvim-treesitter.configs").setup({
+            ensure_installed = { 'vim', 'c', 'cpp', 'python', 'java', 'c_sharp'},
+            highlight = { enable = true },
+            indent = { enable = true },
+            playground = {
+                enable = true,
+            }
+        })
+        vim.api.nvim_set_hl(0, "String", { fg = "#B8BB26",italic = false}) 
+        vim.api.nvim_set_hl(0, "Delimiter", { fg = "#EBDBB2" })
+        vim.api.nvim_set_hl(0, "Operator", { fg = "#EBDBB2"}) 
+        vim.api.nvim_set_hl(0, "Identifier", { fg = "none"}) 
+        vim.api.nvim_set_hl(0, "Type", { fg = "none"})
+        vim.api.nvim_set_hl(0, "Conditional", { fg = "#FE8019"}) 
+        vim.api.nvim_set_hl(0, "Repeat", { fg = "#FE8019"}) 
+        vim.api.nvim_set_hl(0, "Label", { fg = "#FE8019"}) 
+        vim.api.nvim_set_hl(0, "Exception", { fg = "#FE8019"})	
+        vim.api.nvim_set_hl(0, "Keyword", { fg = "#FE8019"})
+        vim.api.nvim_set_hl(0, "@keyword.operator", { fg = "#FE8019"})
+        vim.api.nvim_set_hl(0, "@type.qualifier", { fg = "#FABD2F"})
+        vim.api.nvim_set_hl(0, "@type.builtin", { fg = "#83A598"})
+        vim.api.nvim_set_hl(0, "@attribute", { fg = "#83A598"})
+        vim.api.nvim_set_hl(0, "@type", { fg = "#8EC07C"}) 
+        vim.api.nvim_set_hl(0, "@variable", { fg = "#EBDBB2" })
+        vim.api.nvim_set_hl(0, "@variable.builtin", { fg = "#EBDBB2" }) 
+        vim.api.nvim_set_hl(0, "@field", { fg = "#FBF1C7"})
+        vim.api.nvim_set_hl(0, "@constant", { fg = "#FBF1C7"})
+        vim.api.nvim_set_hl(0, "@include", { fg = "#FE8019"})  
+        vim.api.nvim_set_hl(0, "@constructor", { fg = "#B8BB26"})  
+        vim.api.nvim_set_hl(0, "@string.escape", { fg = "#D3869B"})  
+    end
     },
-    textobjects = {
-        select = {
-            enable = true,
-            lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-            keymaps = {
-                -- You can use the capture groups defined in textobjects.scm
-                ['aa'] = '@parameter.outer',
-                ['ia'] = '@parameter.inner',
-                ['af'] = '@function.outer',
-                ['if'] = '@function.inner',
-                ['ac'] = '@class.outer',
-                ['ic'] = '@class.inner',
-            },
-        },
-        move = {
-            enable = true,
-            set_jumps = true, -- whether to set jumps in the jumplist
-            goto_next_start = {
-                [']m'] = '@function.outer',
-                [']]'] = '@class.outer',
-            },
-            goto_next_end = {
-                [']M'] = '@function.outer',
-                [']['] = '@class.outer',
-            },
-            goto_previous_start = {
-                ['[m'] = '@function.outer',
-                ['[['] = '@class.outer',
-            },
-            goto_previous_end = {
-                ['[M'] = '@function.outer',
-                ['[]'] = '@class.outer',
-            },
-        },
-        swap = {
-            enable = true,
-            swap_next = {
-                ['<leader>a'] = '@parameter.inner',
-            },
-            swap_previous = {
-                ['<leader>A'] = '@parameter.inner',
-            },
-        },
-    },
-   vim.api.nvim_set_hl(0, "Special", { fg = "#83a598" }), --#fabd2f
-   vim.api.nvim_set_hl(0, "Delimiter", { fg = "#EBDBB2" }),
-   vim.api.nvim_set_hl(0, "Identifier", { fg = "#EBDBB2" }),
-   vim.api.nvim_set_hl(0, "Operator", { fg = "#fe8019", italic = false }),
-   vim.api.nvim_set_hl(0, "@type.qualifier", { fg = "#fe8019" }),
-   vim.api.nvim_set_hl(0, "@constructor", { link = "Type" }),
+    {'nvim-treesitter/playground'}
 }
