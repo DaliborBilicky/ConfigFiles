@@ -3,7 +3,16 @@ return {
     build = ":TSUpdate",
     config = function()
         require("nvim-treesitter.configs").setup({
-            ensure_installed = { 'vim', 'c', 'cpp', 'python', 'java', 'c_sharp'},
+            ensure_installed = {
+					'vimdoc', 
+					'query', 
+					'vim', 
+					'c', 
+					'cpp', 
+					'python', 
+					'java', 
+					'c_sharp'
+				},
             highlight = { enable = true },
             indent = { enable = true },
             playground = {
@@ -26,7 +35,8 @@ return {
         vim.api.nvim_set_hl(0, "@attribute", { fg = "#83A598"})
         vim.api.nvim_set_hl(0, "@type", { fg = "#8EC07C"}) 
         vim.api.nvim_set_hl(0, "@variable", { fg = "#EBDBB2" })
-        vim.api.nvim_set_hl(0, "@variable.builtin", { fg = "#EBDBB2" }) 
+        vim.api.nvim_set_hl(0, "@lsp.type.parameter", { fg = "#EBDBB2", italic = true })
+        vim.api.nvim_set_hl(0, "@variable.builtin", { fg = "#EBDBB2", italic = true }) 
         vim.api.nvim_set_hl(0, "@field", { fg = "#FBF1C7"})
         vim.api.nvim_set_hl(0, "@constant", { fg = "#FBF1C7"})
         vim.api.nvim_set_hl(0, "@include", { fg = "#FE8019"})  

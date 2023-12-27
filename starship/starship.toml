@@ -2,6 +2,7 @@ add_newline = true
 
 format = """
 $username\
+$shell\
 $directory\
 $git_branch\
 $git_commit\
@@ -17,12 +18,19 @@ $character\
 """
 
 
-[username]
-style_user = 'bright-yellow'
-style_root = 'red'
-format = '[$user]($style)'
+[shell]
+style = 'bright-yellow'
+bash_indicator = 'Bash'
+powershell_indicator = 'Pwsh'
+format = '[$indicator]($style)'
 disabled = false
-show_always = true
+
+
+[username]
+style_root = 'bright-red'
+format = '[$user]($style) '
+disabled = false
+show_always = false
 
 
 [directory]

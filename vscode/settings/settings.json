@@ -78,9 +78,20 @@
             "commands": ["editor.action.showDefinitionPreviewHover"]
         },
         {
-            // go to the definition
-            "before": ["leader", "j"],
-            "after": ["g", "d"]
+            "before": ["C-d"],
+            "after": ["C-d", "z", "z"]
+        },
+        {
+            "before": ["C-u"],
+            "after": ["C-u", "z", "z"]
+        },
+        {
+            "before": ["n"],
+            "after": ["n", "z", "z"]
+        },
+        {
+            "before": ["N"],
+            "after": ["N", "z", "z"]
         }
     ],
     "vim.visualModeKeyBindings": [
@@ -90,5 +101,6 @@
         // Move selected lines while staying in visual mode
         { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
         { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
-    ]
+    ],
+    "security.workspace.trust.untrustedFiles": "open"
 }
