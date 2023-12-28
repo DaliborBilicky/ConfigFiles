@@ -1,8 +1,8 @@
-vim.api.nvim_exec('language en_US', true)
-vim.cmd('let g:netrw_banner=0')
+vim.api.nvim_exec("language en_US", true)
+vim.cmd("let g:netrw_banner=0")
 
-vim.opt.background = 'dark'
-vim.opt.signcolumn = 'yes'
+vim.opt.background = "dark"
+vim.opt.signcolumn = "yes"
 vim.opt.mouse = nil
 vim.opt.showmode = false
 vim.opt.termguicolors = true
@@ -30,4 +30,4 @@ vim.opt.shiftwidth = 4
 vim.opt.updatetime = 50
 vim.opt.pumheight = 7
 
-vim.opt.guicursor = 'i:ver100,a:blinkwait700-blinkoff400-blinkon250'
+vim.opt.guicursor = "i:ver100,a:blinkwait700-blinkoff400-blinkon250"
