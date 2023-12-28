@@ -23,7 +23,7 @@ return {
 
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
-			ensure_installed = { "clangd", "pyright" },
+			ensure_installed = { "clangd", "pyright", "jdtls" },
 		})
 	end,
 }
