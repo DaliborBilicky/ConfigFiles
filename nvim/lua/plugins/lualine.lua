@@ -3,12 +3,12 @@ return {
     config = function()
         require("lualine").setup({
             options = {
-                icons_enabled = false,
 				component_separators = '⎪',
 				section_separators = '',
+				symbols = {error = ' ', warn = ' ', info = ' ', hint = '󱠂'},
             },
 			sections = {
-				lualine_x = {'encoding', 'filetype'},
+				lualine_x = {'fileformat', 'filetype'},
 			},
         })
     end

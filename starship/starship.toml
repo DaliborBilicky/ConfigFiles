@@ -37,7 +37,7 @@ show_always = false
 truncation_length = 3
 truncation_symbol = '…/'
 home_symbol = '~'
-read_only = ' '
+read_only = '󰉐 '
 format = ' in [$read_only](red)[$path](bright-green)'
 disabled = false
 use_os_path_sep = false
@@ -54,7 +54,7 @@ disabled = false
 
 [git_commit]
 commit_hash_length = 7
-format = ' on [$hash](bright-cyan)'
+format = ' on [󰜘$hash](bright-cyan)'
 only_detached = true
 tag_disabled = true
 disabled = false
@@ -89,7 +89,7 @@ disabled = false
 
 
 [python]
-format = ' via [ $version(\($virtualenv\))](bright-yellow)'
+format = ' via [󰌠 $version(\($virtualenv\))](bright-yellow)'
 
 
 [java]

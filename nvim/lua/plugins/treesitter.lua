@@ -37,6 +37,7 @@ return {
         vim.api.nvim_set_hl(0, "@variable", { fg = "#EBDBB2" })
         vim.api.nvim_set_hl(0, "@lsp.type.parameter", { fg = "#EBDBB2", italic = true })
         vim.api.nvim_set_hl(0, "@variable.builtin", { fg = "#EBDBB2", italic = true }) 
+        vim.api.nvim_set_hl(0, "@boolean", { fg = "#D3869B", italic = true }) 
         vim.api.nvim_set_hl(0, "@field", { fg = "#FBF1C7"})
         vim.api.nvim_set_hl(0, "@constant", { fg = "#FBF1C7"})
         vim.api.nvim_set_hl(0, "@include", { fg = "#FE8019"})  

@@ -3,6 +3,7 @@ vim.cmd('let g:netrw_banner=0')
 
 vim.opt.background = 'dark'
 vim.opt.signcolumn = 'yes'
+vim.opt.mouse = nil
 vim.opt.showmode = false
 vim.opt.termguicolors = true
 vim.opt.number = true
