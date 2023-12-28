@@ -1,16 +1,5 @@
-function banner {
-echo "     __    _                               __   
-    / /   (_)   _____     ____  ____  ____/ /   
-   / /   / / | / / _ \   / __ \/ __ \/ __  /    
-  / /___/ /| |/ /  __/  / /_/ / / / / /_/ /     
- /_____/_/ |___/\___/   \__,_/_/ /_/\__,_/      
-            __     __     ___                   
-           / /__  / /_   / (_)   _____          
-          / / _ \/ __/  / / / | / / _ \         
-         / /  __/ /_   / / /| |/ /  __/         
-        /_/\___/\__/  /_/_/ |___/\___/"                                          
-}
-banner
+# Import banner-script
+. "C:\Users\dbili\Documents\PowerShell\Scripts\banner-script.ps1"
 
 $env:LC_MESSAGES="en-US"
 $env:VISUAL="C:\Program Files\Neovim\bin\nvim.exe"
@@ -89,4 +78,5 @@ Set-PSReadLineOption -Colors @{
 
 
 # Start StarShip
+banner
 Invoke-Expression (starship init powershell --print-full-init | Out-String)
