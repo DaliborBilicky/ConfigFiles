@@ -59,7 +59,7 @@ Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 Set-PSFzFOption -EnableAliasFuzzySetLocation 
 Set-PsFzfOption -TabExpansion
 $env:FZF_DEFAULT_OPTS="
---layout=reverse --cycle --info=hidden --prompt='ƒ: ' --pointer='=>' --marker='*'
+--layout=reverse --cycle --info=hidden --prompt='ƒ: ' --pointer='▶' --marker='*'
 --height=50% --multi --preview-window=hidden
 --color=16,bg+:-1,gutter:-1,fg+:blue,prompt:white,pointer:green,marker:yellow
 --bind 'alt-j:down','alt-k:up'"
