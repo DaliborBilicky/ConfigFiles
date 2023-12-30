@@ -1,6 +1,8 @@
 vim.api.nvim_exec("language en_US", true)
 vim.cmd("let g:netrw_banner=0")
 
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
 vim.opt.background = "dark"
 vim.opt.signcolumn = "yes"
 vim.opt.mouse = nil
