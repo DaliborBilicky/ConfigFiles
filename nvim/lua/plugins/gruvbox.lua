@@ -19,7 +19,7 @@ return {
 			contrast = "",
 			palette_overrides = {},
 			overrides = {
-				ErrorMsg = { fg = "#fb4934", bg = "#282828", bold = true },
+				ErrorMsg = { fg = "#fb4934", bg = "none", bold = true },
 				WarningMsg = { fg = "#fe8019" },
 				TelescopePromptPrefix = { fg = "#ebdbb2" },
 				TelescopeSelectionCaret = { fg = "#b8bb26" },
@@ -31,6 +31,6 @@ return {
 			transparent_mode = true,
 		})
 		vim.cmd("colorscheme gruvbox")
-		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#504945" })
+		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#3c3836" })
 	end,
 }

@@ -6,8 +6,9 @@ $shell\
 $directory\
 $git_branch\
 $git_commit\
-$git_status\
 $git_state\
+$git_status\
+$os\
 $python\
 $java\
 $c\
@@ -18,27 +19,29 @@ $character\
 """
 
 
+[username]
+style_user = 'fg:bright-yellow'
+style_root = 'fg:bright-red'
+format = '[\[](fg:red)[$user]($style)[@](fg:bright-green)'
+disabled = false
+show_always = true
+
+
 [shell]
-style = 'bright-yellow'
 bash_indicator = 'Bash'
 powershell_indicator = 'Pwsh'
-format = '[$indicator]($style)'
+style = 'fg:bright-cyan'
 disabled = false
-
-
-[username]
-style_root = 'bright-red'
-format = '[$user]($style) '
-disabled = false
-show_always = false
 
 
 [directory]
-truncation_length = 3
+truncation_length = 2
 truncation_symbol = '…/'
 home_symbol = '~'
-read_only = '󰉐 '
-format = ' in [$read_only](red)[$path](bright-green)'
+read_only = ''
+style = 'fg:bright-blue'
+read_only_style = 'fg:red'
+format = '[$read_only]($read_only_style)[$path]($style)'
 disabled = false
 use_os_path_sep = false
 truncate_to_repo = false
@@ -47,16 +50,31 @@ truncate_to_repo = false
 [git_branch]
 truncation_length = 8
 truncation_symbol = '…'
-format = ' on [$branch](bright-cyan)'
+style = 'fg:bright-purple'
+format = '[\($branch]($style)'
 only_attached = false
 disabled = false
 
 
 [git_commit]
 commit_hash_length = 7
-format = ' on [󰜘$hash](bright-cyan)'
+style = 'fg:bright-purple'
+format = '[\($hash]($style)'
 only_detached = true
 tag_disabled = true
+disabled = false
+
+
+[git_state]
+rebase = 'REBASING'
+merge = 'MERGING'
+revert = 'REVERTING'
+cherry_pick = 'CHERRY-PICKING'
+bisect = 'BISECTING'
+am = 'AM'
+am_or_rebase = 'AM/REBASE'
+style = 'fg:purple'
+format = '[\($state\)]($style)'
 disabled = false
 
 
@@ -73,42 +91,35 @@ modified = '*'
 staged = '+$count'
 renamed = '~'
 deleted = ''
-format = '([\($all_status$ahead_behind\)](bright-cyan))'
-
-
-[git_state]
-rebase = 'REBASING'
-merge = 'MERGING'
-revert = 'REVERTING'
-cherry_pick = 'CHERRY-PICKING'
-bisect = 'BISECTING'
-am = 'AM'
-am_or_rebase = 'AM/REBASE'
-format = '[\($state\)](cyan)'
-disabled = false
+format = '[$all_status$ahead_behind\)](bright-purple)'
 
 
 [python]
-format = ' via [󰌠 $version(\($virtualenv\))](bright-yellow)'
+format = ' ➜ \(󰌠 $pyenv_prefix$version(|$virtualenv)\)'
 
 
 [java]
-format = ' via [ $version](bright-red)'
+format = ' ➜ \( $version\)(bright-red)'
 
 
 [lua]
-format = ' via [⏾ $version](blue)'
+format = ' ➜ \(⏾ $version|)(blue)'
 
 
 [c]
-format = ' via [ $version](bright-blue)'
+format = ' ➜ \( $version\)(bright-blue)'
 
 
 [nodejs]
-format = ' via [ $version](bright-green)'
+format = ' ➜ \( $version\)(bright-green)'
+
+
+[os]
+format = '[\]](red)'
+disabled = false
 
 
 [character]
-success_symbol = '[](white)'
-error_symbol = '[](white)'
-vimcmd_symbol = '[](white)'
+success_symbol = ''
+error_symbol = ''
+vimcmd_symbol = ''
