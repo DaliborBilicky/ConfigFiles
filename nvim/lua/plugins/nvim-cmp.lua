@@ -35,8 +35,8 @@ return {
 
 			-- sources for autocompletion
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
+				{ name = "nvim_lsp" },
 				{ name = "buffer" },
 				{ name = "path" },
 			}),
@@ -101,6 +101,13 @@ return {
 					end
 					return item
 				end,
+			},
+			window = {
+				completion = cmp.config.window.bordered({
+					scrollbar = false,
+					winhighlight = "FloatBorder:None,CursorLine:MyCmp",
+				}),
+				documentation = cmp.config.window.bordered({ scrollbar = false }),
 			},
 		})
 	end,

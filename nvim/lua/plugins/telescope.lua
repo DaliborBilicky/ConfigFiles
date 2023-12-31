@@ -11,8 +11,8 @@ return {
 
 		telescope.setup({
 			defaults = {
-				prompt_prefix = " ",
-				selection_caret = "  ",
+				prompt_prefix = ":",
+				selection_caret = "█",
 				multi_icon = "",
 				path_display = { "smart" },
 				layout_config = { prompt_position = "top" },
