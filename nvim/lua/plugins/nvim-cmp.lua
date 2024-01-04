@@ -42,46 +42,40 @@ return {
 			}),
 
 			formatting = {
-				fields = { "abbr", "kind", "menu" },
+				fields = { "kind", "abbr", "menu" },
 				format = function(entry, item)
 					local kind_icons = {
-						Text = "",
-						Method = "󰆧",
-						Function = "󰊕",
-						Constructor = "",
-						Field = "󰇽",
-						Variable = "󰂡",
-						Class = "󰠱",
-						Interface = "",
-						Module = "",
-						Property = "󰜢",
-						Unit = "",
-						Value = "󰎠",
-						Enum = "",
-						Keyword = "󰌋",
-						Snippet = "",
-						Color = "󰏘",
-						File = "󰈙",
-						Reference = "",
-						Folder = "󰉋",
-						EnumMember = "",
-						Constant = "󰏿",
-						Struct = "",
-						Event = "",
-						Operator = "󰆕",
-						TypeParameter = "󰅲",
+						Text = "  ",
+						Method = " 󰆧 ",
+						Function = " 󰊕 ",
+						Constructor = "  ",
+						Field = " 󰇽 ",
+						Variable = " 󰂡 ",
+						Class = " 󰠱 ",
+						Interface = "  ",
+						Module = "  ",
+						Property = " 󰜢 ",
+						Unit = "  ",
+						Value = " 󰎠 ",
+						Enum = "  ",
+						Keyword = " 󰌋 ",
+						Snippet = "  ",
+						Color = " 󰏘 ",
+						File = " 󰈙 ",
+						Reference = "  ",
+						Folder = " 󰉋 ",
+						EnumMember = "  ",
+						Constant = " 󰏿 ",
+						Struct = "  ",
+						Event = "  ",
+						Operator = " 󰆕 ",
+						TypeParameter = " 󰅲 ",
 					}
-					item.kind = string.format("%s %s", kind_icons[item.kind], item.kind)
 
-					local menu_icon = {
-						buffer = "[BUFF]",
-						nvim_lsp = "[LSP]",
-						luasnip = "[LSNP]",
-						nvim_lua = "[LUA]",
-						path = "[PATH]",
-					}
-					item.menu = menu_icon[entry.source.name]
-
+					local kind = item.kind
+					item.kind = (kind_icons[kind] or "?")
+					item.menu = " (" .. kind .. ") "
+	
 					fixed_width = fixed_width or false
 
 					local content = item.abbr
@@ -91,8 +85,9 @@ return {
 					end
 
 					local win_width = vim.api.nvim_win_get_width(0)
+					
 
-					local max_content_width = fixed_width and fixed_width - 10 or math.floor(win_width * 0.2)
+					local max_content_width = fixed_width and fixed_width - 10 or math.floor(win_width * 0.17)
 
 					if #content > max_content_width then
 						item.abbr = vim.fn.strcharpart(content, 0, max_content_width - 3) .. "..."
@@ -103,7 +98,7 @@ return {
 				end,
 			},
 			window = {
-				completion = { scrollbar = false },
+				completion = { scrollbar = false, side_padding = 0 },
 				documentation = { scrollbar = false },
 			},
 		})
