@@ -103,11 +103,8 @@ return {
 				end,
 			},
 			window = {
-				completion = cmp.config.window.bordered({
-					scrollbar = false,
-					winhighlight = "FloatBorder:None,CursorLine:MyCmp",
-				}),
-				documentation = cmp.config.window.bordered({ scrollbar = false }),
+				completion = { scrollbar = false },
+				documentation = { scrollbar = false },
 			},
 		})
 	end,

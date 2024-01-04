@@ -7,9 +7,9 @@ return {
 				section_separators = "",
 				symbols = { error = " ", warn = " ", info = " ", hint = "󰠠 " },
 			},
-			sections = {
-				lualine_x = { "fileformat", "filetype" },
-			},
+			-- sections = {
+			-- 	lualine_x = { "fileformat", "filetype" },
+			-- },
 		})
 	end,
 }

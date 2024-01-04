@@ -21,16 +21,22 @@ return {
 			invert_intend_guides = false,
 			inverse = true,
 			contrast = "",
-			palette_overrides = {},
+			palette_overrides = { light0 = "#ebdbb2" },
 			overrides = {
-				ErrorMsg = { fg = "#fb4934", bg = "none", bold = true },
-				WarningMsg = { fg = "#fe8019" },
-				TelescopePromptPrefix = { fg = "#fbf1c7" },
+				TelescopePromptPrefix = { fg = "#d3869b" },
 				TelescopeMultiSelection = { fg = "#fabd2f" },
 				TelescopeSelectionCaret = { fg = "#83a598" },
-				TelescopeSelection = { fg = "#3c3836", bg = "#83a598" },
+				TelescopeSelection = { fg = "#282828", bg = "#83a598" },
 				TelescopeMatching = { fg = "#b8bb26" },
-				Pmenu = { fg = "#fbf1c7", bg = "none" },
+				TelescopePromptNormal = { fg = "#ebdbb2", bg = "#3c3836" },
+				TelescopePromptTitle = { fg = "#282828", bg = "#d3869b" },
+				TelescopePromptBorder = { fg = "#3c3836", bg = "#3c3836" },
+				TelescopeNormal = { fg = "#ebdbb2", bg = "#282828" },
+				TelescopePreviewTitle = { fg = "#282828", bg = "#8ec07c" },
+				TelescopePreviewBorder = { fg = "#282828", bg = "#282828" },
+				TelescopeResultsTitle = { fg = "#282828", bg = "#282828" },
+				TelescopeResultsBorder = { fg = "#282828", bg = "#282828" },
+				Pmenu = { fg = "#ebdbb2", bg = "#3c3836" },
 				PmenuSel = { fg = "#3c3836", bg = "#83a598" },
 				PmenuSbar = { bg = "none" },
 				PmenuThumb = { bg = "none" },
@@ -39,6 +45,6 @@ return {
 			transparent_mode = true,
 		})
 		vim.cmd("colorscheme gruvbox")
-		vim.api.nvim_set_hl(0, "MyCmp", { fg = "#3c3836", bg = "#83a598" })
+		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#282828" })
 	end,
 }

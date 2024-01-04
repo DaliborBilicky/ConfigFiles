@@ -1,7 +1,12 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>fe", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+-- LSP
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>df", vim.diagnostic.open_float)
+vim.keymap.set("n", "K", vim.lsp.buf.hover)
 
 local formatOnSave = function()
 	vim.api.nvim_command("lua vim.lsp.buf.format()")
@@ -31,3 +36,4 @@ vim.keymap.set({ "n", "v", "i" }, "<Up>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Down>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Right>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Left>", "<nop>")
+
