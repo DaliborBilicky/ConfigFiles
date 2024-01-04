@@ -12,7 +12,7 @@ return {
 		telescope.setup({
 			defaults = {
 				prompt_prefix = "  ",
-				selection_caret = "  ",
+				selection_caret = "⠀",
 				multi_icon = "",
 				path_display = { "smart" },
 				path_display = { "truncate" },
@@ -45,6 +45,7 @@ return {
 		keymap.set("n", "<leader>fg", builtin.git_files)
 		keymap.set("n", "<leader>fs", builtin.live_grep)
 		keymap.set("n", "<leader>fc", builtin.grep_string)
+		keymap.set("n", "<leader>fd", builtin.diagnostics)
 		-- LSP
 		keymap.set("n", "<leader>fr", builtin.lsp_references)
 		keymap.set("n", "gd", builtin.lsp_definitions)

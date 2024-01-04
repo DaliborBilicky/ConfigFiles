@@ -47,16 +47,16 @@ return {
 					local kind_icons = {
 						Text = "  ",
 						Method = " 󰆧 ",
-						Function = " 󰊕 ",
+						Function = " ƒ ",
 						Constructor = "  ",
 						Field = " 󰇽 ",
-						Variable = " 󰂡 ",
+						Variable = " β ",
 						Class = " 󰠱 ",
 						Interface = "  ",
 						Module = "  ",
 						Property = " 󰜢 ",
 						Unit = "  ",
-						Value = " 󰎠 ",
+						Value = "  ",
 						Enum = "  ",
 						Keyword = " 󰌋 ",
 						Snippet = "  ",
@@ -65,7 +65,7 @@ return {
 						Reference = "  ",
 						Folder = " 󰉋 ",
 						EnumMember = "  ",
-						Constant = " 󰏿 ",
+						Constant = " π ",
 						Struct = "  ",
 						Event = "  ",
 						Operator = " 󰆕 ",
@@ -75,7 +75,7 @@ return {
 					local kind = item.kind
 					item.kind = (kind_icons[kind] or "?")
 					item.menu = " (" .. kind .. ") "
-	
+
 					fixed_width = fixed_width or false
 
 					local content = item.abbr
@@ -85,7 +85,6 @@ return {
 					end
 
 					local win_width = vim.api.nvim_win_get_width(0)
-					
 
 					local max_content_width = fixed_width and fixed_width - 10 or math.floor(win_width * 0.17)
 
