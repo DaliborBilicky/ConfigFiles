@@ -14,15 +14,13 @@ $java\
 $c\
 $nodejs\
 $lua\
-$line_break\
 $character\
 """
 
 
 [username]
-style_user = 'fg:bright-yellow'
-style_root = 'fg:bright-red'
-format = '[\[](fg:red)[$user]($style)[@](fg:bright-green)'
+style_root = 'bright-red'
+format = '[\[](red)[$user](bright-yellow)[@](bright-green)'
 disabled = false
 show_always = true
 
@@ -30,18 +28,17 @@ show_always = true
 [shell]
 bash_indicator = 'Bash'
 powershell_indicator = 'Pwsh'
-style = 'fg:bright-cyan'
+style = 'bright-cyan'
 disabled = false
 
 
 [directory]
-truncation_length = 2
-truncation_symbol = '…/'
+truncation_length = 1
+truncation_symbol = ''
 home_symbol = '~'
 read_only = ''
-style = 'fg:bright-blue'
-read_only_style = 'fg:red'
-format = '[$read_only]($read_only_style)[$path]($style)'
+read_only_style = 'red'
+format = '[$read_only]($read_only_style)[$path](bright-blue)'
 disabled = false
 use_os_path_sep = false
 truncate_to_repo = false
@@ -50,16 +47,14 @@ truncate_to_repo = false
 [git_branch]
 truncation_length = 8
 truncation_symbol = '…'
-style = 'fg:bright-purple'
-format = '[\($branch]($style)'
+format = '[\($branch](bright-purple)'
 only_attached = false
 disabled = false
 
 
 [git_commit]
 commit_hash_length = 7
-style = 'fg:bright-purple'
-format = '[\($hash]($style)'
+format = '[\($hash](bright-purple)'
 only_detached = true
 tag_disabled = true
 disabled = false
@@ -73,13 +68,11 @@ cherry_pick = 'CHERRY-PICKING'
 bisect = 'BISECTING'
 am = 'AM'
 am_or_rebase = 'AM/REBASE'
-style = 'fg:purple'
-format = '[\($state\)]($style)'
+format = '[\($state\)](purple)'
 disabled = false
 
 
 [git_status]
-style = 'bold green'
 conflicted = '⚠'
 up_to_date = ''
 untracked = ''
@@ -95,23 +88,23 @@ format = '[$all_status$ahead_behind\)](bright-purple)'
 
 
 [python]
-format = ' ➜ \(󰌠 $pyenv_prefix$version(|$virtualenv)\)'
+format = '\(󰌠 $version(|$virtualenv)\)'
 
 
 [java]
-format = ' ➜ \( $version\)(bright-red)'
+format = '\( $version\)'
 
 
 [lua]
-format = ' ➜ \(⏾ $version|)(blue)'
+format = '\(⏾ $version|)'
 
 
 [c]
-format = ' ➜ \( $version\)(bright-blue)'
+format = '\( $version\)'
 
 
 [nodejs]
-format = ' ➜ \( $version\)(bright-green)'
+format = '\( $version\)'
 
 
 [os]
