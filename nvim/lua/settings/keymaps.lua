@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>D", function()
+	require("trouble").toggle()
+end)
 
 -- LSP
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
@@ -36,4 +39,3 @@ vim.keymap.set({ "n", "v", "i" }, "<Up>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Down>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Right>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Left>", "<nop>")
-

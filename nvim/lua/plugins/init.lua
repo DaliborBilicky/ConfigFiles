@@ -3,5 +3,4 @@ return {
 	{ "mbbill/undotree", event = { "BufReadPre", "BufNewFile" } },
 	{ "stevearc/dressing.nvim", event = "VeryLazy", opts = { input = { enabled = false } } },
 	{ "nvim-tree/nvim-web-devicons" },
-	{ "mfussenegger/nvim-jdtls" },
 }

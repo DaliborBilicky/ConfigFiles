@@ -6,39 +6,38 @@ $shell\
 $directory\
 $git_branch\
 $git_commit\
-$git_state\
 $git_status\
-$os\
+$git_state\
 $python\
 $java\
 $c\
 $nodejs\
 $lua\
+$line_break\
 $character\
 """
 
 
 [username]
-style_root = 'bright-red'
-format = '[\[](red)[$user](bright-yellow)[@](bright-green)'
+format = '[Admin](bright-red) in '
 disabled = false
-show_always = true
+show_always = false
 
 
 [shell]
 bash_indicator = 'Bash'
 powershell_indicator = 'Pwsh'
-style = 'bright-cyan'
+format = '[$indicator](bright-yellow) '
 disabled = false
 
 
 [directory]
-truncation_length = 1
+truncation_length = 2
 truncation_symbol = ''
 home_symbol = '~'
-read_only = ''
+read_only = '󰉐 '
 read_only_style = 'red'
-format = '[$read_only]($read_only_style)[$path](bright-blue)'
+format = 'at [$read_only]($read_only_style)[$path](bright-green) '
 disabled = false
 use_os_path_sep = false
 truncate_to_repo = false
@@ -47,28 +46,16 @@ truncate_to_repo = false
 [git_branch]
 truncation_length = 8
 truncation_symbol = '…'
-format = '[\($branch](bright-purple)'
+format = 'on [󰊢 $branch](bright-cyan)'
 only_attached = false
 disabled = false
 
 
 [git_commit]
 commit_hash_length = 7
-format = '[\($hash](bright-purple)'
+format = 'on [󰊢 $hash](bright-cyan)'
 only_detached = true
 tag_disabled = true
-disabled = false
-
-
-[git_state]
-rebase = 'REBASING'
-merge = 'MERGING'
-revert = 'REVERTING'
-cherry_pick = 'CHERRY-PICKING'
-bisect = 'BISECTING'
-am = 'AM'
-am_or_rebase = 'AM/REBASE'
-format = '[\($state\)](purple)'
 disabled = false
 
 
@@ -84,35 +71,41 @@ modified = '*'
 staged = '+$count'
 renamed = '~'
 deleted = ''
-format = '[$all_status$ahead_behind\)](bright-purple)'
+format = '[(\($all_status$ahead_behind\))](bright-cyan) '
+
+
+[git_state]
+rebase = 'REBASING'
+merge = 'MERGING'
+revert = 'REVERTING'
+cherry_pick = 'CHERRY-PICKING'
+bisect = 'BISECTING'
+am = 'AM'
+am_or_rebase = 'AM/REBASE'
+format = '[➜ $state](bright-cyan)'
+disabled = false
 
 
 [python]
-format = '\(󰌠 $version(|$virtualenv)\)'
+format = 'via [󰌠 $version(\($virtualenv)\)](bright-yellow)'
 
 
 [java]
-format = '\( $version\)'
+format = 'via [ $version](bright-red)'
 
 
 [lua]
-format = '\(⏾ $version|)'
+format = 'via [⏾ $version](blue)'
 
 
 [c]
-format = '\( $version\)'
+format = 'via [ $version](bright-blue)'
 
 
 [nodejs]
-format = '\( $version\)'
-
-
-[os]
-format = '[\]](red)'
-disabled = false
+format = 'via [ $version](bright-green)'
 
 
 [character]
 success_symbol = ''
 error_symbol = ''
-vimcmd_symbol = ''

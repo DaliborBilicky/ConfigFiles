@@ -1,12 +1,19 @@
 
 function Set-Wallpaper {
-$image = echo "Closing-hours-Ismail-Inceoglu
-Glitched-Ismail-Inceoglu
-The-right-time-Ismail-Inceoglu
-The-quick-silver-fox-jumped-Ismail-Inceoglu
-For-sale-Ismail-Inceoglu" | fzf
+$image = echo "Closing-hours
+Glitched
+The-right-time
+The-quick-silver-fox-jumped
+Desert-rascals
+Mid-rox-charge
+Solar-day-255
+Finally-coffee-s-here
+Harvest
+Petrolea
+Redrouf
+For-sale" | fzf
 
-$wallpaperPath = "C:\Users\dbili\Pictures\Wallpapers\$image.jpg"
+$wallpaperPath = "C:\Users\dbili\Pictures\Wallpapers\$image-Ismail-Inceoglu.jpg"
 
 Set-ItemProperty -Path "HKCU:\Control Panel\Desktop\" -Name Wallpaper -Value $wallpaperPath
 

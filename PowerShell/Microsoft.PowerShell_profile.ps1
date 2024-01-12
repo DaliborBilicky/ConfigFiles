@@ -1,14 +1,26 @@
+#   _    ____  ____   ___  _____ ___ _     _____
+#  | |  |  _ \|  _ \ / _ \|  ___|_ _| |   | ____|
+# / __) | |_) | |_) | | | | |_   | || |   |  _|
+# \__ \ |  __/|  _ <| |_| |  _|  | || |___| |___
+# (   / |_|   |_| \_\\___/|_|   |___|_____|_____|
+#  |_|
+
+
+
+
+# Env variables 
+$env:LC_MESSAGES="en-US"
+
+
 # Import banner-script
 . "C:\Users\dbili\Documents\PowerShell\Scripts\banner-script.ps1"
-. "C:\Users\dbili\Documents\PowerShell\Scripts\wallpaper-script.ps1"
 
-$env:LC_MESSAGES="en-US"
-$env:VISUAL="C:\Program Files\Neovim\bin\nvim.exe"
-$env:EDITOR="C:\Program Files\Neovim\bin\nvim.exe"
+
 # Import modules
 Import-Module PSFzF
 Import-Module posh-git
 Import-Module z
+
 
 # Functions
 function gitSync {
@@ -30,12 +42,14 @@ function update {
     vim
 }
 
+
 # Functions for aliases
 function ls {lsd -a --group-directories-first}
 function ll {lsd -al --group-directories-first}
 function touch($path) {set-content -Path ($path) -Value ($null)} 
 function mkdir($path) {New-Item -Path ($path) -ItemType Directory | Out-Null} 
 function clear_with_banner {clear | banner}
+
 
 # Alias
 Remove-Alias ls
@@ -46,14 +60,16 @@ Set-Alias mkf touch
 Set-Alias cc clear_with_banner
 Set-Alias man tldr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
-Set-Alias sw Set-Wallpaper
 
-# Autocomplete
+
+# Auto complete
 Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+
 
 # Vi mode in powershell
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd:$true
 Set-PSReadLineOption -EditMode vi
+
 
 # Fzf / PSFzf
 Set-PSFzFOption -PSReadlineChordProvider 'Ctrl+f' 
@@ -69,7 +85,7 @@ $env:FZF_DEFAULT_OPTS="
 
 # Color tweaks
 Set-PSReadLineOption -Colors @{
-    Command                  = 'Green'
+    Command                  = '#fbf1c7'
     Parameter                = 'Gray'
     Number                   = 'Magenta' 
     Variable                 = 'Cyan'
@@ -80,5 +96,5 @@ Set-PSReadLineOption -Colors @{
 
 
 # Start StarShip
-banner
+cc
 Invoke-Expression (starship init powershell --print-full-init | Out-String)

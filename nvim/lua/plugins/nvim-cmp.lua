@@ -31,9 +31,9 @@ return {
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<Tab>"] = cmp.mapping.confirm({ select = true }),
+				["<CR>"] = cmp.mapping.confirm({ select = true }),
 			}),
 
-			-- sources for autocompletion
 			sources = cmp.config.sources({
 				{ name = "luasnip" },
 				{ name = "nvim_lsp" },
@@ -45,36 +45,36 @@ return {
 				fields = { "kind", "abbr", "menu" },
 				format = function(entry, item)
 					local kind_icons = {
-						Text = "  ",
-						Method = " 󰆧 ",
-						Function = " ƒ ",
-						Constructor = "  ",
-						Field = " 󰇽 ",
-						Variable = " β ",
-						Class = " 󰠱 ",
-						Interface = "  ",
-						Module = "  ",
-						Property = " 󰜢 ",
-						Unit = "  ",
-						Value = "  ",
-						Enum = "  ",
-						Keyword = " 󰌋 ",
-						Snippet = "  ",
-						Color = " 󰏘 ",
-						File = " 󰈙 ",
-						Reference = "  ",
-						Folder = " 󰉋 ",
-						EnumMember = "  ",
-						Constant = " π ",
-						Struct = "  ",
-						Event = "  ",
-						Operator = " 󰆕 ",
-						TypeParameter = " 󰅲 ",
+						Text = "",
+						Method = "󰆧",
+						Function = "ƒ",
+						Constructor = "",
+						Field = "󰇽",
+						Variable = "β",
+						Class = "󰠱",
+						Interface = "",
+						Module = "",
+						Property = "󰜢",
+						Unit = "",
+						Value = "",
+						Enum = "",
+						Keyword = "󰌋",
+						Snippet = "",
+						Color = "󰏘",
+						File = "󰈙",
+						Reference = "",
+						Folder = "󰉋",
+						EnumMember = "",
+						Constant = "π",
+						Struct = "",
+						Event = "",
+						Operator = "󰆕",
+						TypeParameter = "󰅲",
 					}
 
 					local kind = item.kind
 					item.kind = (kind_icons[kind] or "?")
-					item.menu = " (" .. kind .. ") "
+					item.menu = " (" .. (kind or " ") .. ") "
 
 					fixed_width = fixed_width or false
 
@@ -97,7 +97,7 @@ return {
 				end,
 			},
 			window = {
-				completion = { scrollbar = false, side_padding = 0 },
+				completion = { scrollbar = false },
 				documentation = { scrollbar = false },
 			},
 		})

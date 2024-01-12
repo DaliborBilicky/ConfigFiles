@@ -19,7 +19,7 @@ return {
 		})
 
 		mason_lspconfig.setup({
-			ensure_installed = { "clangd", "pyright", "jdtls" },
+			ensure_installed = { "clangd", "pyright" },
 		})
 	end,
 }

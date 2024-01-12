@@ -5,11 +5,8 @@ return {
 			options = {
 				component_separators = "⎪",
 				section_separators = "",
-				symbols = { error = " ", warn = " ", info = " ", hint = "󰠠 " },
+				symbols = { error = " ", warn = " ", hint = " ", info = " " }
 			},
-			-- sections = {
-			-- 	lualine_x = { "fileformat", "filetype" },
-			-- },
 		})
 	end,
 }

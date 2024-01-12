@@ -12,23 +12,15 @@ return {
 		telescope.setup({
 			defaults = {
 				prompt_prefix = "  ",
-				selection_caret = "⠀",
+				selection_caret = "⠀", --empty char
 				multi_icon = "",
-				path_display = { "smart" },
-				path_display = { "truncate" },
+				path_display = { "smart", "truncate" },
 				sorting_strategy = "ascending",
 				layout_config = {
 					horizontal = {
 						prompt_position = "top",
 						preview_width = 0.55,
-						results_width = 0.8,
 					},
-					vertical = {
-						mirror = false,
-					},
-					width = 0.87,
-					height = 0.80,
-					preview_cutoff = 120,
 				},
 				mappings = {
 					i = {
@@ -36,6 +28,16 @@ return {
 						["<M-j>"] = actions.move_selection_next,
 					},
 				},
+			},
+			pickers = {
+				find_files = { previewer = false, results_title = "" },
+				git_files = { previewer = false, results_title = "" },
+				diagnostics = { previewer = false, results_title = "" },
+				lsp_definitions = { previewer = false, results_title = "" },
+				buffers = { previewer = false, results_title = "" },
+				live_grep = { results_title = "" },
+				grep_string = { results_title = "" },
+				lsp_references = { results_title = "" },
 			},
 		})
 
@@ -45,7 +47,10 @@ return {
 		keymap.set("n", "<leader>fg", builtin.git_files)
 		keymap.set("n", "<leader>fs", builtin.live_grep)
 		keymap.set("n", "<leader>fc", builtin.grep_string)
-		keymap.set("n", "<leader>fd", builtin.diagnostics)
+		keymap.set("n", "<leader>fb", builtin.buffers)
+		keymap.set("n", "<leader>fd", function()
+			builtin.diagnostics({ bufnr = 0 })
+		end)
 		-- LSP
 		keymap.set("n", "<leader>fr", builtin.lsp_references)
 		keymap.set("n", "gd", builtin.lsp_definitions)
