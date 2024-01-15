@@ -32,3 +32,6 @@ vim.opt.shiftwidth = 4
 vim.opt.updatetime = 50
 vim.opt.pumheight = 7
 
+vim.diagnostic.config({
+	float = { border = "rounded" },
+})

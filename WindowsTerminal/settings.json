@@ -404,7 +404,7 @@
                 "weight": "semi-bold"
             },
             "intenseTextStyle": "bright",
-            "opacity": 92,
+            "opacity": 85,
             "padding": "15",
             "scrollbarState": "hidden",
             "useAcrylic": false
@@ -427,7 +427,7 @@
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
-                "opacity": 92,
+                "opacity": 85,
                 "padding": "15",
                 "source": "Windows.Terminal.PowershellCore"
             },
@@ -442,7 +442,7 @@
                 "hidden": true,
                 "icon": "C:/Program Files/Git/mingw64/share/git/git-for-windows.ico",
                 "name": "Bash",
-                "opacity": 79,
+                "opacity": 85,
                 "source": "Git"
             },
             {
@@ -529,7 +529,7 @@
             "brightRed": "#FB4934",
             "brightWhite": "#EBDBB2",
             "brightYellow": "#FABD2F",
-            "cursorColor": "#a89984",
+            "cursorColor": "#A89984",
             "cyan": "#689D6A",
             "foreground": "#EBDBB2",
             "green": "#98971A",

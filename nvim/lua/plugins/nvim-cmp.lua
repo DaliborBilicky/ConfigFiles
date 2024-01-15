@@ -1,12 +1,13 @@
 return {
 	"hrsh7th/nvim-cmp",
-	event = "InsertEnter",
+	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
+		"hrsh7th/cmp-cmdline",
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -43,7 +44,7 @@ return {
 
 			formatting = {
 				fields = { "kind", "abbr", "menu" },
-				format = function(entry, item)
+				format = function(entry, vim_item)
 					local kind_icons = {
 						Text = "",
 						Method = "󰆧",
@@ -72,34 +73,36 @@ return {
 						TypeParameter = "󰅲",
 					}
 
-					local kind = item.kind
-					item.kind = (kind_icons[kind] or "?")
-					item.menu = " (" .. (kind or " ") .. ") "
+					local kind = vim_item.kind
+					vim_item.kind = (kind_icons[kind] or "?")
+					vim_item.menu = " (" .. (kind or " ") .. ") "
 
-					fixed_width = fixed_width or false
-
-					local content = item.abbr
-
-					if fixed_width then
-						vim.o.pumwidth = fixed_width
-					end
-
-					local win_width = vim.api.nvim_win_get_width(0)
-
-					local max_content_width = fixed_width and fixed_width - 10 or math.floor(win_width * 0.17)
-
-					if #content > max_content_width then
-						item.abbr = vim.fn.strcharpart(content, 0, max_content_width - 3) .. "..."
-					else
-						item.abbr = content .. (" "):rep(max_content_width - #content)
-					end
-					return item
+					vim_item.abbr = string.sub(vim_item.abbr, 1, 25)
+					return vim_item
 				end,
 			},
 			window = {
-				completion = { scrollbar = false },
-				documentation = { scrollbar = false },
+				completion = cmp.config.window.bordered({
+					winhighlight = "FloatBorder:TelescopeResultsBorder,CursorLine:Visual",
+					scrollbar = false,
+				}),
+				documentation = cmp.config.window.bordered({ scrollbar = false }),
 			},
+			cmp.setup.cmdline({ "/", "?" }, {
+				mapping = cmp.mapping.preset.cmdline(),
+				sources = {
+					{ name = "buffer" },
+				},
+			}),
+
+			cmp.setup.cmdline(":", {
+				mapping = cmp.mapping.preset.cmdline(),
+				sources = cmp.config.sources({
+					{ name = "path" },
+				}, {
+					{ name = "cmdline" },
+				}),
+			}),
 		})
 	end,
 }

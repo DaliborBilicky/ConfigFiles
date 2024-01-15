@@ -2,7 +2,6 @@ add_newline = true
 
 format = """
 $username\
-$shell\
 $directory\
 $git_branch\
 $git_commit\
@@ -14,6 +13,7 @@ $c\
 $nodejs\
 $lua\
 $line_break\
+$shell\
 $character\
 """
 
@@ -25,19 +25,19 @@ show_always = false
 
 
 [shell]
-bash_indicator = 'Bash'
-powershell_indicator = 'Pwsh'
-format = '[$indicator](bright-yellow) '
+bash_indicator = '[](white)'
+powershell_indicator = '[→](white)'
+format = '$indicator'
 disabled = false
 
 
 [directory]
-truncation_length = 2
+truncation_length = 3
 truncation_symbol = ''
 home_symbol = '~'
 read_only = '󰉐 '
 read_only_style = 'red'
-format = 'at [$read_only]($read_only_style)[$path](bright-green) '
+format = '[$read_only]($read_only_style)[$path](bright-green) '
 disabled = false
 use_os_path_sep = false
 truncate_to_repo = false
@@ -82,30 +82,30 @@ cherry_pick = 'CHERRY-PICKING'
 bisect = 'BISECTING'
 am = 'AM'
 am_or_rebase = 'AM/REBASE'
-format = '[➜ $state](bright-cyan)'
+format = '[ $state](bright-cyan)'
 disabled = false
 
 
 [python]
-format = 'via [󰌠 $version(\($virtualenv)\)](bright-yellow)'
+format = 'via [󰌠 $version(\($virtualenv\))](bright-yellow) '
 
 
 [java]
-format = 'via [ $version](bright-red)'
+format = 'via [ $version](bright-red) '
 
 
 [lua]
-format = 'via [⏾ $version](blue)'
+format = 'via [⏾ $version](blue) '
 
 
 [c]
-format = 'via [ $version](bright-blue)'
+format = 'via [ $version](bright-blue) '
 
 
 [nodejs]
-format = 'via [ $version](bright-green)'
+format = 'via [ $version](bright-green) '
 
 
 [character]
-success_symbol = ''
-error_symbol = ''
+success_symbol = ''
+error_symbol = ''

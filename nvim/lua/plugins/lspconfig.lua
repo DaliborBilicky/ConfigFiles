@@ -17,12 +17,19 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
+		local handlers = {
+			["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
+			["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
+		}
+
 		lspconfig["clangd"].setup({
 			capabilities = capabilities,
+			handlers = handlers,
 		})
 
 		lspconfig["pyright"].setup({
 			capabilities = capabilities,
+			handlers = handlers,
 		})
 	end,
 }
