@@ -75,15 +75,23 @@ return {
 
 					local kind = vim_item.kind
 					vim_item.kind = (kind_icons[kind] or "?")
-					vim_item.menu = " (" .. (kind or " ") .. ") "
+					vim_item.menu = "(" .. (kind or " ") .. ")"
 
-					vim_item.abbr = string.sub(vim_item.abbr, 1, 25)
+					function trim(text)
+						local max = 22
+						if text and text:len() > max then
+							text = text:sub(1, max) .. "..."
+						end
+						return text
+					end
+
+					vim_item.abbr = trim(vim_item.abbr)
 					return vim_item
 				end,
 			},
 			window = {
 				completion = cmp.config.window.bordered({
-					winhighlight = "FloatBorder:TelescopeResultsBorder,CursorLine:Visual",
+					winhighlight = "CursorLine:Visual",
 					scrollbar = false,
 				}),
 				documentation = cmp.config.window.bordered({ scrollbar = false }),

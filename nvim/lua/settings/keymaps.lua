@@ -1,9 +1,9 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
-vim.keymap.set("n", "<leader>D", function()
-	require("trouble").toggle()
-end)
+vim.keymap.set("n", "<leader>tw", "<cmd>TroubleToggle workspace_diagnostics<cr>")
+vim.keymap.set("n", "<leader>td", "<cmd>TroubleToggle document_diagnostics<cr>")
+vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>")
 
 -- LSP
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
@@ -32,10 +32,21 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Up>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Down>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Right>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Left>", "<nop>")
+vim.keymap.set("n", "<leader>v", "<C-w>v")
+
+vim.keymap.set("n", "<leader>s", "<C-w>s")
+vim.keymap.set("n", "<leader>h", "<C-w>h")
+vim.keymap.set("n", "<leader>j", "<C-w>j")
+vim.keymap.set("n", "<leader>k", "<C-w>k")
+vim.keymap.set("n", "<leader>l", "<C-w>l")
+
+vim.keymap.set("n", "<Up>", ":resize -2<CR>")
+vim.keymap.set("n", "<Down>", ":resize +2<CR>")
+vim.keymap.set("n", "<Left>", ":vertical resize -2<CR>")
+vim.keymap.set("n", "<Right>", ":vertical resize +2<CR>")

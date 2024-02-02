@@ -1,43 +1,31 @@
-add_newline = true
+add_newline = false
 
 format = """
+$python\
+$dotnet\
+$git_state\
 $username\
 $directory\
 $git_branch\
 $git_commit\
 $git_status\
-$git_state\
-$python\
-$java\
-$c\
-$nodejs\
-$lua\
-$line_break\
-$shell\
 $character\
 """
 
 
 [username]
-format = '[Admin](bright-red) in '
+format = '[Admin](#fe8019):'
 disabled = false
 show_always = false
 
 
-[shell]
-bash_indicator = '[](white)'
-powershell_indicator = '[→](white)'
-format = '$indicator'
-disabled = false
-
-
 [directory]
-truncation_length = 3
+truncation_length = 1
 truncation_symbol = ''
 home_symbol = '~'
-read_only = '󰉐 '
-read_only_style = 'red'
-format = '[$read_only]($read_only_style)[$path](bright-green) '
+read_only = ''
+read_only_style = '#fe8019'
+format = '[$read_only]($read_only_style)[$path](bright-green)'
 disabled = false
 use_os_path_sep = false
 truncate_to_repo = false
@@ -46,14 +34,14 @@ truncate_to_repo = false
 [git_branch]
 truncation_length = 8
 truncation_symbol = '…'
-format = 'on [󰊢 $branch](bright-cyan)'
+format = '\([󰘬 ](white)[$branch](bright-blue)'
 only_attached = false
 disabled = false
 
 
 [git_commit]
 commit_hash_length = 7
-format = 'on [󰊢 $hash](bright-cyan)'
+format = '\([󰜘 ](white)[$hash](bright-blue)'
 only_detached = true
 tag_disabled = true
 disabled = false
@@ -71,7 +59,7 @@ modified = '*'
 staged = '+$count'
 renamed = '~'
 deleted = ''
-format = '[(\($all_status$ahead_behind\))](bright-cyan) '
+format = '[$all_status$ahead_behind](bright-blue)\)'
 
 
 [git_state]
@@ -82,30 +70,18 @@ cherry_pick = 'CHERRY-PICKING'
 bisect = 'BISECTING'
 am = 'AM'
 am_or_rebase = 'AM/REBASE'
-format = '[ $state](bright-cyan)'
+format = '[$state ](bright-yellow)'
 disabled = false
 
 
 [python]
-format = 'via [󰌠 $version(\($virtualenv\))](bright-yellow) '
+format = '[(\($virtualenv\) )](white)'
 
 
-[java]
-format = 'via [ $version](bright-red) '
-
-
-[lua]
-format = 'via [⏾ $version](blue) '
-
-
-[c]
-format = 'via [ $version](bright-blue) '
-
-
-[nodejs]
-format = 'via [ $version](bright-green) '
+[dotnet]
+format = '[(\($tfm\) )](white)'
 
 
 [character]
-success_symbol = ''
-error_symbol = ''
+success_symbol = ''
+error_symbol = ''

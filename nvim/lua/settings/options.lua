@@ -1,5 +1,3 @@
-vim.api.nvim_exec("language en_US", true)
-
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
 vim.opt.background = "dark"
@@ -31,7 +29,6 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.updatetime = 50
 vim.opt.pumheight = 7
-
-vim.diagnostic.config({
-	float = { border = "rounded" },
-})
+vim.opt.laststatus = 3
+vim.opt.cmdheight = 0
+vim.g.netrw_altv = 1

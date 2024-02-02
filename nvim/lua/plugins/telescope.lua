@@ -32,7 +32,6 @@ return {
 			pickers = {
 				find_files = { previewer = false, results_title = "" },
 				git_files = { previewer = false, results_title = "" },
-				diagnostics = { previewer = false, results_title = "" },
 				lsp_definitions = { previewer = false, results_title = "" },
 				buffers = { previewer = false, results_title = "" },
 				live_grep = { results_title = "" },
@@ -42,17 +41,14 @@ return {
 		})
 
 		local builtin = require("telescope.builtin")
-		local keymap = vim.keymap
-		keymap.set("n", "<leader>ff", builtin.find_files)
-		keymap.set("n", "<leader>fg", builtin.git_files)
-		keymap.set("n", "<leader>fs", builtin.live_grep)
-		keymap.set("n", "<leader>fc", builtin.grep_string)
-		keymap.set("n", "<leader>fb", builtin.buffers)
-		keymap.set("n", "<leader>fd", function()
-			builtin.diagnostics({ bufnr = 0 })
-		end)
+		vim.keymap.set("n", "<leader>ff", builtin.find_files)
+		vim.keymap.set("n", "<leader>fg", builtin.git_files)
+		vim.keymap.set("n", "<leader>fs", builtin.live_grep)
+		vim.keymap.set("n", "<leader>fc", builtin.grep_string)
+		vim.keymap.set("n", "<leader>fb", builtin.buffers)
+		vim.keymap.set("n", "<leader>fn", "<cmd>Noice telescope<cr>")
 		-- LSP
-		keymap.set("n", "<leader>fr", builtin.lsp_references)
-		keymap.set("n", "gd", builtin.lsp_definitions)
+		vim.keymap.set("n", "<leader>fr", builtin.lsp_references)
+		vim.keymap.set("n", "gd", builtin.lsp_definitions)
 	end,
 }

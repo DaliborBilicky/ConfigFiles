@@ -22,6 +22,11 @@ return {
 			["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 		}
 
+		vim.diagnostic.config({
+			float = { border = "rounded" },
+			virtual_text = false,
+		})
+
 		lspconfig["clangd"].setup({
 			capabilities = capabilities,
 			handlers = handlers,
@@ -31,5 +36,11 @@ return {
 			capabilities = capabilities,
 			handlers = handlers,
 		})
+
+		-- lspconfig["omnisharp"].setup({
+		-- 	capabilities = capabilities,
+		-- 	handlers = handlers,
+		-- 	cmd = { "dotnet", "C:/Users/dbili/AppData/Local/nvim-data/mason/packages/omnisharp/libexec/OmniSharp.dll" },
+		-- })
 	end,
 }
