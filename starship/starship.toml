@@ -1,51 +1,73 @@
-add_newline = true
+add_newline = false
 
 format = """
+$os\
 $username\
+$c\
+$lua\
+$java\
+$python\
+$nodejs\
+$dotnet\
 $shell\
 $directory\
 $git_branch\
 $git_commit\
-$git_status\
-$fill\
-$python\
-$java\
-$c\
-$lua\
-$nodejs\
-$dotnet\
-$line_break\
 $git_state\
+$git_status\
 $character\
 """
 
-[fill]
-symbol = ' '
 
+[os]
+format = '\['
+disabled = false
 
 
 [username]
-style_user = 'bright-yellow'
 style_root = '#fe8019'
-format = '\[[$user]($style)[@](white)'
+format = '[ROOT ]($style)'
 disabled = false
-show_always = true
+show_always = false 
+
+
+[c]
+detect_extensions = ['c', 'cpp', 'h', 'hpp']
+format = '[ ](white)'
+
+
+[lua]
+format = '[⏾ ](white)'
+
+
+[java]
+format = '[ ](white)'
+
+
+[python]
+format = '[󰌠 ](white)[($virtualenv )](bright-yellow)'
+
+
+[nodejs]
+format = '[ ](white)'
+
+
+[dotnet]
+format = '[󰪮 ](white)'
 
 
 [shell]
 bash_indicator = "Bash"
 powershell_indicator = "Pwsh"
-format = '[$indicator](bright-green)'
+format = '[$indicator](bright-green)[:](white)'
 disabled = false
 
 
 [directory]
 truncation_length = 1
-truncation_symbol = ''
-home_symbol = '~'
 read_only = ''
 read_only_style = '#fe8019'
-format = ' [$read_only]($read_only_style)[$path](bright-cyan)\]'
+format = '[$read_only]($read_only_style)[$path](bright-cyan)\]'
 disabled = false
 use_os_path_sep = false
 truncate_to_repo = false
@@ -61,9 +83,21 @@ disabled = false
 
 [git_commit]
 commit_hash_length = 7
-format = '[ ➜ ](white)\([󰜘 ](white)[$hash](bright-blue)'
+format = '[ ➜ ](white)\([󰜘 ](white)[$hash](bright-purple)'
 only_detached = true
 tag_disabled = true
+disabled = false
+
+
+[git_state]
+rebase = 'REBA'
+merge = 'MERG'
+revert = 'REVE'
+cherry_pick = 'CHER'
+bisect = 'BISE'
+am = 'AM'
+am_or_rebase = 'AM/REBA'
+format = '[ $state ](#fe8019)'
 disabled = false
 
 
@@ -80,42 +114,6 @@ staged = '+$count'
 renamed = '~'
 deleted = ''
 format = '[$all_status$ahead_behind](bright-purple)\)'
-
-
-[git_state]
-rebase = 'REBASING'
-merge = 'MERGING'
-revert = 'REVERTING'
-cherry_pick = 'CHERRY-PICKING'
-bisect = 'BISECTING'
-am = 'AM'
-am_or_rebase = 'AM/REBASE'
-format = '[$state ](bright-yellow)'
-disabled = false
-
-
-[python]
-format = '(\[[󰌠 ](white)[$version( $virtualenv)](bright-yellow)\] )'
-
-
-[java]
-format = '(\[[ ](white)[$version](bright-red)\] )'
-
-
-[lua]
-format = '(\[[⏾ ](white)[$version](blue)\] )'
-
-
-[c]
-format = '(\[[ ](white)[$version](bright-blue)\] )'
-
-
-[nodejs]
-format = '(\[[ ](white)[$version](bright-green)\] )'
-
-
-[dotnet]
-format = '(\[[󰪮 ](white)[$version( $tfm)](bright-purple)\] )'
 
 
 [character]

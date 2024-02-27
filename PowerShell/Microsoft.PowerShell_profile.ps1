@@ -22,13 +22,7 @@ Import-Module posh-git
 Import-Module z
 
 
-# Functions
-function gitSync {
-    git add .
-    git commit 
-    git push origin main
-}
- 
+# Functions 
 function ch {
     cd C:\Users\dbili\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine
     vim ConsoleHost_history.txt
@@ -85,7 +79,7 @@ $env:FZF_DEFAULT_OPTS="
 
 # Color tweaks
 Set-PSReadLineOption -Colors @{
-    Command                  = '#fbf1c7'
+    Command                  = 'Yellow'
     Parameter                = 'Gray'
     Number                   = 'Magenta' 
     Variable                 = 'Cyan'

@@ -66,7 +66,6 @@ icons:
 # == Ignore Globs ==
 # A list of globs to ignore when listing.
 ignore-globs:
-  - .git
   - .android
   - .cache
   - Links
@@ -75,7 +74,8 @@ ignore-globs:
   - ntuser.dat
   - 3D Objects
   - Favorites
-
+  - OneDrive
+  - "Saved Games"
 # == Indicators ==
 # Whether to add indicator characters to certain listed files.
 # Possible values: false, true
