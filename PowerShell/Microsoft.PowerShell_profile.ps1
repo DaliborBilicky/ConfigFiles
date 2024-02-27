@@ -54,6 +54,7 @@ Set-Alias mkf touch
 Set-Alias cc clear_with_banner
 Set-Alias man tldr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
+Set-Alias syncConfig '~\Documents\ConfigFiles\sync.ps1'
 
 
 # Auto complete
