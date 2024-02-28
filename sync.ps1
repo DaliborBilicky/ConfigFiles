@@ -24,5 +24,8 @@ cp -r -fo ~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\Local
 echo "$([char] 27)[92m  $([char] 27)[0m WindowsTerminal" 
 
 git add .
+echo "$([char] 27)[92m  $([char] 27)[0m git add" 
 git commit
+echo "$([char] 27)[92m  $([char] 27)[0m git commit" 
 git push
+echo "$([char] 27)[92m  $([char] 27)[0m git push" 
