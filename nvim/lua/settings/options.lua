@@ -1,8 +1,6 @@
-vim.opt.spelllang = "en_us"
 vim.opt.spell = true
 vim.opt.background = "dark"
 vim.opt.signcolumn = "yes"
--- vim.opt.colorcolumn = "80"
 vim.opt.mouse = nil
 vim.opt.showmode = false
 vim.opt.termguicolors = true
@@ -30,5 +28,3 @@ vim.opt.shiftwidth = 4
 vim.opt.updatetime = 50
 vim.opt.pumheight = 7
 vim.opt.laststatus = 3
-vim.opt.cmdheight = 0
-vim.g.netrw_altv = 1

@@ -46,7 +46,7 @@ return {
 				fields = { "kind", "abbr", "menu" },
 				format = function(entry, vim_item)
 					local kind_icons = {
-						Text = "",
+						Text = "󰊄",
 						Method = "󰆧",
 						Function = "ƒ",
 						Constructor = "",

@@ -32,11 +32,13 @@ return {
 			pickers = {
 				find_files = { previewer = false, results_title = "" },
 				git_files = { previewer = false, results_title = "" },
+				diagnostics = { previewer = false, results_title = "" },
 				lsp_definitions = { previewer = false, results_title = "" },
 				buffers = { previewer = false, results_title = "" },
 				live_grep = { results_title = "" },
 				grep_string = { results_title = "" },
 				lsp_references = { results_title = "" },
+				spell_suggest = { theme = "cursor" },
 			},
 		})
 
@@ -46,9 +48,9 @@ return {
 		vim.keymap.set("n", "<leader>fs", builtin.live_grep)
 		vim.keymap.set("n", "<leader>fc", builtin.grep_string)
 		vim.keymap.set("n", "<leader>fb", builtin.buffers)
-		vim.keymap.set("n", "<leader>fn", "<cmd>Noice telescope<cr>")
-		-- LSP
+		vim.keymap.set("n", "<leader>fd", builtin.diagnostics)
 		vim.keymap.set("n", "<leader>fr", builtin.lsp_references)
 		vim.keymap.set("n", "gd", builtin.lsp_definitions)
+		vim.keymap.set("n", "<leader>sp", builtin.spell_suggest)
 	end,
 }

@@ -32,15 +32,15 @@ return {
 			handlers = handlers,
 		})
 
-		lspconfig["pyright"].setup({
+		lspconfig["jdtls"].setup({
 			capabilities = capabilities,
 			handlers = handlers,
 		})
 
-		-- lspconfig["omnisharp"].setup({
-		-- 	capabilities = capabilities,
-		-- 	handlers = handlers,
-		-- 	cmd = { "dotnet", "C:/Users/dbili/AppData/Local/nvim-data/mason/packages/omnisharp/libexec/OmniSharp.dll" },
-		-- })
+		lspconfig["omnisharp"].setup({
+			capabilities = capabilities,
+			handlers = handlers,
+			cmd = { "dotnet", "C:/Users/dbili/AppData/Local/nvim-data/mason/packages/omnisharp/libexec/OmniSharp.dll" },
+		})
 	end,
 }

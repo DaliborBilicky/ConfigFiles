@@ -1,6 +1,5 @@
 return {
 	"folke/noice.nvim",
-	event = "VeryLazy",
 	dependencies = {
 		"MunifTanjim/nui.nvim",
 		"rcarriga/nvim-notify",
@@ -22,6 +21,7 @@ return {
 					["cmp.entry.get_documentation"] = true,
 				},
 				progress = { enabled = false },
+				documentation = { view = false },
 			},
 			cmdline = {
 				format = {
@@ -40,7 +40,7 @@ return {
 			},
 		})
 		require("notify").setup({
-			background_colour = "#000000",
+			background_colour = "none",
 			render = "compact",
 			stages = "static",
 			icons = {
