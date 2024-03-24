@@ -10,6 +10,7 @@
 
 # Env variables 
 $env:LC_MESSAGES="en-US"
+$OutputEncoding = [System.Text.Encoding]::UTF8
 
 
 # Import banner-script

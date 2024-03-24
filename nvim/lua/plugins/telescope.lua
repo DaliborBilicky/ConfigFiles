@@ -51,6 +51,6 @@ return {
 		vim.keymap.set("n", "<leader>fd", builtin.diagnostics)
 		vim.keymap.set("n", "<leader>fr", builtin.lsp_references)
 		vim.keymap.set("n", "gd", builtin.lsp_definitions)
-		vim.keymap.set("n", "<leader>sp", builtin.spell_suggest)
+		vim.keymap.set("n", "<leader>cp", builtin.spell_suggest)
 	end,
 }

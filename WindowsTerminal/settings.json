@@ -4,6 +4,37 @@
     "actions": 
     [
         {
+            "command": 
+            {
+                "action": "globalSummon"
+            },
+            "keys": "win+`"
+        },
+        {
+            "command": 
+            {
+                "action": "newWindow",
+                "profile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}"
+            },
+            "keys": "alt+n"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 0
+            },
+            "keys": "alt+1"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
+            },
+            "keys": "alt+s"
+        },
+        {
             "command": "unbound",
             "keys": "ctrl+shift+w"
         },
@@ -142,52 +173,14 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "down"
-            },
-            "keys": "alt+s"
-        },
-        {
-            "command": 
-            {
                 "action": "switchToTab",
                 "index": 7
             },
             "keys": "alt+8"
         },
         {
-            "command": 
-            {
-                "action": "newWindow",
-                "profile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}"
-            },
-            "keys": "alt+n"
-        },
-        {
-            "command": 
-            {
-                "action": "globalSummon"
-            },
-            "keys": "win+`"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 0
-            },
-            "keys": "alt+1"
-        },
-        {
             "command": "closePane",
             "keys": "alt+q"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "down"
-            }
         },
         {
             "command": 
@@ -198,8 +191,11 @@
             "keys": "alt+v"
         },
         {
-            "command": "resetFontSize",
-            "keys": "alt+0"
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "down"
+            }
         },
         {
             "command": 
@@ -214,6 +210,10 @@
                 "action": "newTab"
             },
             "keys": "alt+t"
+        },
+        {
+            "command": "resetFontSize",
+            "keys": "alt+0"
         },
         {
             "command": 
@@ -248,17 +248,17 @@
         {
             "command": 
             {
-                "action": "scrollUp"
-            },
-            "keys": "ctrl+k"
-        },
-        {
-            "command": 
-            {
                 "action": "moveFocus",
                 "direction": "previousInOrder"
             },
             "keys": "alt+shift+enter"
+        },
+        {
+            "command": 
+            {
+                "action": "scrollUp"
+            },
+            "keys": "ctrl+k"
         },
         {
             "command": 
@@ -293,18 +293,18 @@
         {
             "command": 
             {
-                "action": "resizePane",
-                "direction": "up"
-            },
-            "keys": "alt+shift+k"
-        },
-        {
-            "command": 
-            {
                 "action": "switchToTab",
                 "index": 3
             },
             "keys": "alt+4"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": "alt+shift+k"
         },
         {
             "command": 
@@ -358,17 +358,17 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 5
+                "index": 6
             },
-            "keys": "alt+6"
+            "keys": "alt+7"
         },
         {
             "command": 
             {
                 "action": "switchToTab",
-                "index": 6
+                "index": 5
             },
-            "keys": "alt+7"
+            "keys": "alt+6"
         }
     ],
     "alwaysOnTop": false,
@@ -459,7 +459,7 @@
                 "name": "Windows PowerShell"
             },
             {
-                "commandline": "pwsh.exe -nologo",
+                "commandline": "cmd.exe /k chcp 65001",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": true,
                 "name": "Command Prompt"
@@ -549,6 +549,52 @@
             "foreground": "#EBDBB2",
             "green": "#98971A",
             "name": "Gruvbox Dark",
+            "purple": "#B16286",
+            "red": "#CC241D",
+            "selectionBackground": "#665C54",
+            "white": "#BDAE93",
+            "yellow": "#D79921"
+        },
+        {
+            "background": "#1D2021",
+            "black": "#282828",
+            "blue": "#458588",
+            "brightBlack": "#928374",
+            "brightBlue": "#83A598",
+            "brightCyan": "#8EC07C",
+            "brightGreen": "#B8BB26",
+            "brightPurple": "#D3869B",
+            "brightRed": "#FB4934",
+            "brightWhite": "#EBDBB2",
+            "brightYellow": "#FABD2F",
+            "cursorColor": "#A89984",
+            "cyan": "#689D6A",
+            "foreground": "#EBDBB2",
+            "green": "#98971A",
+            "name": "Gruvbox Dark Hrad",
+            "purple": "#B16286",
+            "red": "#CC241D",
+            "selectionBackground": "#665C54",
+            "white": "#BDAE93",
+            "yellow": "#D79921"
+        },
+        {
+            "background": "#32302F",
+            "black": "#1D2021",
+            "blue": "#458588",
+            "brightBlack": "#928374",
+            "brightBlue": "#83A598",
+            "brightCyan": "#8EC07C",
+            "brightGreen": "#B8BB26",
+            "brightPurple": "#D3869B",
+            "brightRed": "#FB4934",
+            "brightWhite": "#EBDBB2",
+            "brightYellow": "#FABD2F",
+            "cursorColor": "#A89984",
+            "cyan": "#689D6A",
+            "foreground": "#EBDBB2",
+            "green": "#98971A",
+            "name": "Gruvbox Dark Soft",
             "purple": "#B16286",
             "red": "#CC241D",
             "selectionBackground": "#665C54",
