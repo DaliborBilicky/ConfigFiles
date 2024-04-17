@@ -117,5 +117,5 @@ format = '[$all_status$ahead_behind](bright-purple)\)'
 
 
 [character]
-success_symbol = '[](white)'
-error_symbol = '[](white)'
+success_symbol = '[\$](white)'
+error_symbol = '[\$](white)'
