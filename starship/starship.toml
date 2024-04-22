@@ -1,33 +1,25 @@
 add_newline = true
 
 format = """
-$username\
 $directory\
 $git_branch\
 $git_commit\
 $git_status\
-$git_state\
 $c\
 $java\
 $python\
 $nodejs\
 $dotnet\
 $fill\
-$cmd_duration\
-$time\
+$git_state\
+$username\
 $line_break\
 $character\
 """
 
 
-[username]
-format = '[](#fe8019)[ROOT](fg:black bg:#fe8019)[](#fe8019) '
-disabled = false
-show_always = false 
-
-
 [directory]
-truncation_length = 2
+truncation_length = 1
 read_only = '󱈸'
 read_only_style = 'fg:#fe8019 bg:#32302f'
 format = '[](bright-green)[ ](fg:black bg:bright-green)[ $path](fg:bright-green bg:#32302f)[$read_only]($read_only_style)[](#32302f) '
@@ -67,18 +59,6 @@ deleted = ''
 format = '[$all_status$ahead_behind](fg:bright-purple bg:#32302f)[](#32302f) '
 
 
-[git_state]
-rebase = 'REBASE'
-merge = 'MERGE'
-revert = 'REVERT'
-cherry_pick = 'CHERRY PICK'
-bisect = 'BISECT'
-am = 'AM'
-am_or_rebase = 'AM/REBA'
-format = '[](#fe8019)[ ](fg:black bg:#fe8019)[ $state](fg:#fe8019 bg:#32302f)[](#32302f) '
-disabled = false
-
-
 [c]
 detect_extensions = ['c', 'cpp', 'h', 'hpp']
 format = '[ $version](#7c6f64) '
@@ -104,15 +84,22 @@ format = '[󰪮 $version](#7c6f64) '
 symbol = ' '
 
 
-[cmd_duration]
-min_time = 145
-format = '[$duration](#7c6f64) '
-
-
-[time]
+[git_state]
+rebase = 'REBASE'
+merge = 'MERGE'
+revert = 'REVERT'
+cherry_pick = 'CHERRY PICK'
+bisect = 'BISECT'
+am = 'AM'
+am_or_rebase = 'AM/REBA'
+format = '[](#fe8019)[ ](fg:black bg:#fe8019)[ $state](fg:#fe8019 bg:#32302f)[](#32302f) '
 disabled = false
-format = '[](bright-yellow)[󰥔 ](fg:black bg:bright-yellow)[ $time](fg:bright-yellow bg:#32302f)[](#32302f)'
-time_format = '%H:%M'
+
+
+[username]
+format = '[](#fe8019)[ ](fg:black bg:#fe8019)[ ROOT](fg:#fe8019 bg:#32302f)[](#32302f) '
+disabled = false
+show_always = false 
 
 
 [character]

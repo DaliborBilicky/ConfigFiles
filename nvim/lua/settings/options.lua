@@ -1,6 +1,7 @@
 vim.opt.spell = true
 vim.opt.background = "dark"
 vim.opt.signcolumn = "yes"
+-- vim.opt.colorcolumn = "80"
 vim.opt.mouse = "a"
 vim.opt.showmode = false
 vim.opt.termguicolors = true
