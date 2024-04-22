@@ -1,73 +1,36 @@
-add_newline = false
+add_newline = true
 
 format = """
-$os\
 $username\
+$directory\
+$git_branch\
+$git_commit\
+$git_status\
+$git_state\
 $c\
-$lua\
 $java\
 $python\
 $nodejs\
 $dotnet\
-$shell\
-$directory\
-$git_branch\
-$git_commit\
-$git_state\
-$git_status\
+$fill\
+$cmd_duration\
+$time\
+$line_break\
 $character\
 """
 
 
-[os]
-format = '\['
-disabled = false
-
-
 [username]
-style_root = '#fe8019'
-format = '[ROOT ]($style)'
+format = '[](#fe8019)[ROOT](fg:black bg:#fe8019)[](#fe8019) '
 disabled = false
 show_always = false 
 
 
-[c]
-detect_extensions = ['c', 'cpp', 'h', 'hpp']
-format = '[ ](white)'
-
-
-[lua]
-format = '[⏾ ](white)'
-
-
-[java]
-format = '[ ](white)'
-
-
-[python]
-format = '[󰌠 ](white)[($virtualenv )](bright-yellow)'
-
-
-[nodejs]
-format = '[ ](white)'
-
-
-[dotnet]
-format = '[󰪮 ](white)'
-
-
-[shell]
-bash_indicator = "Bash"
-powershell_indicator = "Pwsh"
-format = '[$indicator](bright-green)[:](white)'
-disabled = false
-
-
 [directory]
-truncation_length = 1
-read_only = ''
-read_only_style = '#fe8019'
-format = '[$read_only]($read_only_style)[$path](bright-cyan)\]'
+truncation_length = 2
+read_only = '󱈸'
+read_only_style = 'fg:#fe8019 bg:#32302f'
+format = '[](bright-green)[ ](fg:black bg:bright-green)[ $path](fg:bright-green bg:#32302f)[$read_only]($read_only_style)[](#32302f) '
 disabled = false
 use_os_path_sep = false
 truncate_to_repo = false
@@ -76,28 +39,16 @@ truncate_to_repo = false
 [git_branch]
 truncation_length = 8
 truncation_symbol = '…'
-format = '[ ➜ ](white)\([󰘬 ](white)[$branch](bright-blue)'
+format = '[](bright-blue)[󰘬 ](fg:black bg:bright-blue)[ $branch](fg:bright-blue bg:#32302f)'
 only_attached = false
 disabled = false
 
 
 [git_commit]
 commit_hash_length = 7
-format = '[ ➜ ](white)\([󰜘 ](white)[$hash](bright-purple)'
+format = '[](bright-blue)[󰜘 ](fg:black bg:bright-blue)[ $hash](fg:bright-blue bg:#32302f)'
 only_detached = true
 tag_disabled = true
-disabled = false
-
-
-[git_state]
-rebase = 'REBA'
-merge = 'MERG'
-revert = 'REVE'
-cherry_pick = 'CHER'
-bisect = 'BISE'
-am = 'AM'
-am_or_rebase = 'AM/REBA'
-format = '[ $state ](#fe8019)'
 disabled = false
 
 
@@ -113,9 +64,57 @@ modified = '*'
 staged = '+$count'
 renamed = '~'
 deleted = ''
-format = '[$all_status$ahead_behind](bright-purple)\)'
+format = '[$all_status$ahead_behind](fg:bright-purple bg:#32302f)[](#32302f) '
+
+
+[git_state]
+rebase = 'REBASE'
+merge = 'MERGE'
+revert = 'REVERT'
+cherry_pick = 'CHERRY PICK'
+bisect = 'BISECT'
+am = 'AM'
+am_or_rebase = 'AM/REBA'
+format = '[](#fe8019)[ ](fg:black bg:#fe8019)[ $state](fg:#fe8019 bg:#32302f)[](#32302f) '
+disabled = false
+
+
+[c]
+detect_extensions = ['c', 'cpp', 'h', 'hpp']
+format = '[ $version](#7c6f64) '
+
+
+[java]
+format = '[ $version](#7c6f64) '
+
+
+[python]
+format = '[󰌠 $version $virtualenv](#7c6f64) '
+
+
+[nodejs]
+format = '[ $version](#7c6f64) '
+
+
+[dotnet]
+format = '[󰪮 $version](#7c6f64) '
+
+
+[fill]
+symbol = ' '
+
+
+[cmd_duration]
+min_time = 145
+format = '[$duration](#7c6f64) '
+
+
+[time]
+disabled = false
+format = '[](bright-yellow)[󰥔 ](fg:black bg:bright-yellow)[ $time](fg:bright-yellow bg:#32302f)[](#32302f)'
+time_format = '%H:%M'
 
 
 [character]
-success_symbol = '[\$](white)'
-error_symbol = '[\$](white)'
+success_symbol = '[](white)'
+error_symbol = '[](white)'

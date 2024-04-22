@@ -1,0 +1,121 @@
+add_newline = false
+
+format = """
+$os\
+$username\
+$c\
+$lua\
+$java\
+$python\
+$nodejs\
+$dotnet\
+$shell\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$character\
+"""
+
+
+[os]
+format = '\['
+disabled = false
+
+
+[username]
+style_root = '#fe8019'
+format = '[ROOT ]($style)'
+disabled = false
+show_always = false 
+
+
+[c]
+detect_extensions = ['c', 'cpp', 'h', 'hpp']
+format = '[ ](white)'
+
+
+[lua]
+format = '[⏾ ](white)'
+
+
+[java]
+format = '[ ](white)'
+
+
+[python]
+format = '[󰌠 ](white)[($virtualenv )](bright-yellow)'
+
+
+[nodejs]
+format = '[ ](white)'
+
+
+[dotnet]
+format = '[󰪮 ](white)'
+
+
+[shell]
+bash_indicator = "Bash"
+powershell_indicator = "Pwsh"
+format = '[$indicator](bright-green)[:](white)'
+disabled = false
+
+
+[directory]
+truncation_length = 1
+read_only = ''
+read_only_style = '#fe8019'
+format = '[$read_only]($read_only_style)[$path](bright-cyan)\]'
+disabled = false
+use_os_path_sep = false
+truncate_to_repo = false
+
+
+[git_branch]
+truncation_length = 8
+truncation_symbol = '…'
+format = '[ ➜ ](white)\([󰘬 ](white)[$branch](bright-blue)'
+only_attached = false
+disabled = false
+
+
+[git_commit]
+commit_hash_length = 7
+format = '[ ➜ ](white)\([󰜘 ](white)[$hash](bright-purple)'
+only_detached = true
+tag_disabled = true
+disabled = false
+
+
+[git_state]
+rebase = 'REBA'
+merge = 'MERG'
+revert = 'REVE'
+cherry_pick = 'CHER'
+bisect = 'BISE'
+am = 'AM'
+am_or_rebase = 'AM/REBA'
+format = '[ $state ](#fe8019)'
+disabled = false
+
+
+[git_status]
+conflicted = '⚠'
+up_to_date = ''
+untracked = ''
+ahead = '⇡${count}'
+diverged = '⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+stashed = '⊞'
+modified = '*'
+staged = '+$count'
+renamed = '~'
+deleted = ''
+format = '[$all_status$ahead_behind](bright-purple)\)'
+
+
+[character]
+success_symbol = '[\$](white)'
+error_symbol = '[\$](white)'

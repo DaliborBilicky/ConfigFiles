@@ -43,8 +43,6 @@ function ls {lsd -a --group-directories-first}
 function ll {lsd -al --group-directories-first}
 function touch($path) {set-content -Path ($path) -Value ($null)} 
 function mkdir($path) {New-Item -Path ($path) -ItemType Directory | Out-Null} 
-function clear_with_banner {clear | banner}
-
 
 # Alias
 Remove-Alias ls
@@ -52,7 +50,7 @@ Set-Alias vim nvim
 Set-Alias vi nvim
 Set-Alias nf neofetch
 Set-Alias mkf touch
-Set-Alias cc clear_with_banner
+Set-Alias cc clear
 Set-Alias man tldr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias syncConfig '~\Documents\ConfigFiles\sync.ps1'
@@ -92,5 +90,4 @@ Set-PSReadLineOption -Colors @{
 
 
 # Start StarShip
-cc
 Invoke-Expression (starship init powershell --print-full-init | Out-String)
