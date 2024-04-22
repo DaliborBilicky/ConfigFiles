@@ -22,7 +22,13 @@ $character\
 truncation_length = 1
 read_only = '󱈸'
 read_only_style = 'fg:#fe8019 bg:#32302f'
-format = '[](bright-green)[ ](fg:black bg:bright-green)[ $path](fg:bright-green bg:#32302f)[$read_only]($read_only_style)[](#32302f) '
+format = """
+[](#b8bb26)\
+[ ](fg:#282828 bg:#b8bb26)\
+[ $path](fg:#b8bb26 bg:#32302f)\
+[$read_only]($read_only_style)\
+[](#32302f) \
+"""
 disabled = false
 use_os_path_sep = false
 truncate_to_repo = false
@@ -31,14 +37,22 @@ truncate_to_repo = false
 [git_branch]
 truncation_length = 8
 truncation_symbol = '…'
-format = '[](bright-blue)[󰘬 ](fg:black bg:bright-blue)[ $branch](fg:bright-blue bg:#32302f)'
+format = """
+[](#83a598)\
+[󰘬 ](fg:#282828 bg:#83a598)\
+[ $branch](fg:#83a598 bg:#32302f)\
+"""
 only_attached = false
 disabled = false
 
 
 [git_commit]
 commit_hash_length = 7
-format = '[](bright-blue)[󰜘 ](fg:black bg:bright-blue)[ $hash](fg:bright-blue bg:#32302f)'
+format = """
+[](#83a598)\
+[󰜘 ](fg:#282828 bg:#83a598)\
+[ $hash](fg:#83a598 bg:#32302f)\
+"""
 only_detached = true
 tag_disabled = true
 disabled = false
@@ -56,28 +70,31 @@ modified = '*'
 staged = '+$count'
 renamed = '~'
 deleted = ''
-format = '[$all_status$ahead_behind](fg:bright-purple bg:#32302f)[](#32302f) '
+format = """
+[$all_status$ahead_behind](fg:#d3869b bg:#32302f)\
+[](#32302f) \
+"""
 
 
 [c]
 detect_extensions = ['c', 'cpp', 'h', 'hpp']
-format = '[ $version](#7c6f64) '
+format = '[ $name $version](#928374) '
 
 
 [java]
-format = '[ $version](#7c6f64) '
+format = '[ $version](#928374) '
 
 
 [python]
-format = '[󰌠 $version $virtualenv](#7c6f64) '
+format = '[󰌠 $version $virtualenv](#928374) '
 
 
 [nodejs]
-format = '[ $version](#7c6f64) '
+format = '[ $version](#928374) '
 
 
 [dotnet]
-format = '[󰪮 $version](#7c6f64) '
+format = '[󰪮 $version](#928374) '
 
 
 [fill]
@@ -92,16 +109,26 @@ cherry_pick = 'CHERRY PICK'
 bisect = 'BISECT'
 am = 'AM'
 am_or_rebase = 'AM/REBA'
-format = '[](#fe8019)[ ](fg:black bg:#fe8019)[ $state](fg:#fe8019 bg:#32302f)[](#32302f) '
+format = """
+[](#fe8019)\
+[ ](fg:#282828 bg:#fe8019)\
+[ $state](fg:#fe8019 bg:#32302f)\
+[](#32302f) \
+"""
 disabled = false
 
 
 [username]
-format = '[](#fe8019)[ ](fg:black bg:#fe8019)[ ROOT](fg:#fe8019 bg:#32302f)[](#32302f) '
+format = """
+[](#fe8019)\
+[ ](fg:#282828 bg:#fe8019)\
+[ ROOT](fg:#fe8019 bg:#32302f)\
+[](#32302f) \
+"""
 disabled = false
 show_always = false 
 
 
 [character]
-success_symbol = '[](white)'
-error_symbol = '[](white)'
+success_symbol = '[](#bdae93)'
+error_symbol = '[](#bdae93)'

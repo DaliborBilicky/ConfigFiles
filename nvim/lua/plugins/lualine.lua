@@ -1,31 +1,57 @@
+-- Copyright (c) 2020-2021 hoob3rt
+-- MIT license, see LICENSE for more details.
+-- stylua: ignore
 local colors = {
-	blue = "#83a598",
-	black = "#1d2021",
-	grey = "#3c3836",
-	silver = "#a89984",
-	white = "#ebdbb2",
-	red = "#fe8019",
-	purple = "#d3869b",
+  black        = '#282828',
+  white        = '#ebdbb2',
+  red          = '#fb4934',
+  green        = '#b8bb26',
+  blue         = '#83a598',
+  yellow       = '#fe8019',
+  gray         = '#a89984',
+  darkgray     = '#3c3836',
+  lightgray    = '#504945',
+  inactivegray = '#7c6f64',
 }
 
-local my_theme = {
+local gruv = {
 	normal = {
-		a = { fg = colors.black, bg = colors.silver },
-		b = { fg = colors.white, bg = colors.grey },
-		c = { fg = colors.white },
+		a = { bg = colors.gray, fg = colors.black, gui = "bold" },
+		b = { bg = colors.lightgray, fg = colors.white },
+		c = { fg = colors.gray },
 	},
-
-	insert = { a = { fg = colors.black, bg = colors.blue } },
-	visual = { a = { fg = colors.black, bg = colors.purple } },
-	replace = { a = { fg = colors.black, bg = colors.red } },
+	insert = {
+		a = { bg = colors.blue, fg = colors.black, gui = "bold" },
+		b = { bg = colors.lightgray, fg = colors.white },
+		c = { fg = colors.gray },
+	},
+	visual = {
+		a = { bg = colors.yellow, fg = colors.black, gui = "bold" },
+		b = { bg = colors.lightgray, fg = colors.white },
+		c = { fg = colors.gray },
+	},
+	replace = {
+		a = { bg = colors.red, fg = colors.black, gui = "bold" },
+		b = { bg = colors.lightgray, fg = colors.white },
+		c = { fg = colors.gray },
+	},
+	command = {
+		a = { bg = colors.green, fg = colors.black, gui = "bold" },
+		b = { bg = colors.lightgray, fg = colors.white },
+		c = { fg = colors.gray },
+	},
+	inactive = {
+		a = { bg = colors.darkgray, fg = colors.gray, gui = "bold" },
+		b = { bg = colors.darkgray, fg = colors.gray },
+		c = { fg = colors.gray },
+	},
 }
-
 return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = my_theme,
+				theme = gruv,
 				component_separators = "",
 				section_separators = { left = "", right = "" },
 				symbols = { error = " ", warn = " ", hint = " ", info = " " },
