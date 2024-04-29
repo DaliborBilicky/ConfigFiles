@@ -1,6 +1,7 @@
 add_newline = true
 
 format = """
+$shell\
 $directory\
 $git_branch\
 $git_commit\
@@ -18,13 +19,24 @@ $character\
 """
 
 
+[shell]
+pwsh_indicator = """ 
+[](#b8bb26)\
+[ ](fg:#282828 bg:#b8bb26)\
+"""
+bash_indicator = """
+[](#b8bb26)\
+[ ](fg:#282828 bg:#b8bb26)\
+"""
+format = '$indicator'
+disabled = false
+
+
 [directory]
 truncation_length = 1
 read_only = '󱈸'
 read_only_style = 'fg:#fe8019 bg:#32302f'
 format = """
-[](#b8bb26)\
-[ ](fg:#282828 bg:#b8bb26)\
 [ $path](fg:#b8bb26 bg:#32302f)\
 [$read_only]($read_only_style)\
 [](#32302f) \
@@ -78,23 +90,23 @@ format = """
 
 [c]
 detect_extensions = ['c', 'cpp', 'h', 'hpp']
-format = '[ $name $version](#928374) '
+format = '[ $name $version](#a89984) '
 
 
 [java]
-format = '[ $version](#928374) '
+format = '[ $version](#a89984) '
 
 
 [python]
-format = '[󰌠 $version $virtualenv](#928374) '
+format = '[󰌠 $version $virtualenv](#a89984) '
 
 
 [nodejs]
-format = '[ $version](#928374) '
+format = '[ $version](#a89984) '
 
 
 [dotnet]
-format = '[󰪮 $version](#928374) '
+format = '[󰪮 $version](#a89984) '
 
 
 [fill]
