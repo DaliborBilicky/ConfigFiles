@@ -39,6 +39,12 @@ return {
 				Delimiter = { fg = "#ebdbb2" },
 				Type = { fg = "#83a598" },
 				Boolean = { fg = "#d3869b", italic = true },
+				Label = { fg = "#fabd2f", italic = true },
+
+				Keyword = { fg = "#fe8019" },
+				Repeat = { link = "Keyword" },
+				Exception = { link = "Keyword" },
+				Conditional = { link = "Keyword" },
 
 				["@keyword.modifier"] = { fg = "#fabd2f" },
 				["@type.qualifier"] = { fg = "#fabd2f" },
@@ -47,10 +53,13 @@ return {
 				["@lsp.type.parameter"] = { italic = true },
 				["@variable.builtin"] = { italic = true },
 
+				["@keyword.operator"] = { link = "Keyword" },
 				["@character.special"] = { link = "Character" },
 				["@function.builtin"] = { link = "Function" },
 				["@constructor"] = { link = "Function" },
 				["@constant.builtin"] = { link = "Constant" },
+				["@string.escape"] = { link = "Boolean" },
+				["@string.special"] = { link = "Boolean" },
 			},
 			dim_inactive = false,
 			transparent_mode = true,
