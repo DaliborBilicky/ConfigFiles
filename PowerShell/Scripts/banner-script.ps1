@@ -1,5 +1,5 @@
 function banner {
-	$random = Get-Random -Minimum 1 -Maximum 11
+	$random = Get-Random -Minimum 1 -Maximum 12
 	Write-Host ""
 	switch ($random) {
 		1 {
@@ -37,6 +37,10 @@ function banner {
 		10 {
 			figlet -f slant "I break code," 
 			figlet -f slant "not hearts"
+		}
+		11 {
+			figlet -f slant "It is what" 
+			figlet -f slant " it is XD"
 		}
 	}
 }

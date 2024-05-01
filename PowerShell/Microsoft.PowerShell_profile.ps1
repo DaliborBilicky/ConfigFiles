@@ -81,13 +81,13 @@ $env:FZF_DEFAULT_OPTS="
 
 # Color tweaks
 Set-PSReadLineOption -Colors @{
-    Command                  = 'Yellow'
-    Parameter                = 'Gray'
-    Number                   = 'Magenta' 
-    Variable                 = 'Cyan'
+    Command                  = 'White'
+    Parameter                = 'White'
     String                   = 'Green'
+    Variable                 = 'Cyan'
+    Number                   = 'Magenta' 
     Comment                  = 'DarkGray'
-    Default                  = 'White'
+	Default					 = 'Gray'
 }
 
 
