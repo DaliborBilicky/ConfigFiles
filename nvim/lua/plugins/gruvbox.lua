@@ -45,8 +45,8 @@ return {
 				Conditional = { link = "Keyword" },
 
 				["@variable.builtin"] = { italic = true },
-				["@lsp.type.parameter"] = { italic = true },
 				["@variable.parameter"] = { italic = true },
+				["@lsp.type.parameter"] = { italic = true },
 				["@type.builtin"] = { fg = "#fabd2f", italic = true },
 				["@keyword.operator"] = { link = "Keyword" },
 				["@character.special"] = { link = "Character" },

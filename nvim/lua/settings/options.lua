@@ -29,3 +29,4 @@ vim.opt.shiftwidth = 4
 vim.opt.updatetime = 50
 vim.opt.pumheight = 7
 vim.opt.laststatus = 3
+vim.opt.cmdheight = 0

@@ -1,17 +1,23 @@
--- Copyright (c) 2020-2021 hoob3rt
--- MIT license, see LICENSE for more details.
--- stylua: ignore
+local function show_recording()
+	local recording_register = vim.fn.reg_recording()
+	if recording_register == "" then
+		return ""
+	else
+		return "recording @" .. recording_register
+	end
+end
+
 local colors = {
-  black        = '#282828',
-  white        = '#ebdbb2',
-  red          = '#fb4934',
-  green        = '#b8bb26',
-  blue         = '#83a598',
-  yellow       = '#fe8019',
-  gray         = '#a89984',
-  darkgray     = '#3c3836',
-  lightgray    = '#504945',
-  inactivegray = '#7c6f64',
+	black = "#282828",
+	white = "#ebdbb2",
+	red = "#fb4934",
+	green = "#b8bb26",
+	blue = "#83a598",
+	yellow = "#fe8019",
+	gray = "#a89984",
+	darkgray = "#3c3836",
+	lightgray = "#504945",
+	inactivegray = "#7c6f64",
 }
 
 local gruv = {
@@ -58,7 +64,16 @@ return {
 			},
 			sections = {
 				lualine_b = { "filename" },
-				lualine_c = { "branch", "diff", "diagnostics" },
+				lualine_c = {
+					{
+						"macro-recording",
+						color = { fg = "#fabd2f" },
+						fmt = show_recording,
+					},
+					"branch",
+					"diff",
+					"diagnostics",
+				},
 			},
 		})
 	end,
