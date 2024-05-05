@@ -50,7 +50,6 @@ function clear_with_banner {clear | banner}
 Remove-Alias ls
 Set-Alias vim nvim
 Set-Alias vi nvim
-Set-Alias nf neofetch
 Set-Alias mkf touch
 Set-Alias cc clear_with_banner
 Set-Alias man tldr

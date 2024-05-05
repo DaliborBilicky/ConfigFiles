@@ -1,25 +1,13 @@
 vim.g.mapleader = " "
 
-local changeSpelling = function()
-	if vim.o.spelllang == "sk_sk" then
-		vim.o.spelllang = "en_us"
-		print("Switched to English spell checking")
-	else
-		vim.o.spelllang = "sk_sk"
-		print("Switched to Slovak spell checking")
-	end
-end
-
 local formatOnSave = function()
 	vim.api.nvim_command("lua vim.lsp.buf.format()")
 	vim.api.nvim_command("write!")
 end
 
 vim.keymap.set("n", "<leader>w", formatOnSave)
-vim.keymap.set("n", "<leader>csp", changeSpelling)
+vim.keymap.set("n", "<leader>ex", ":Explore<CR><CR>")
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
-vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>")
-vim.keymap.set("n", "<leader>fn", "<cmd>Noice telescope<cr>")
 
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action)
