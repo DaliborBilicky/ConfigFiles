@@ -37,10 +37,9 @@ return {
 			handlers = handlers,
 		})
 
-		lspconfig["omnisharp"].setup({
+		lspconfig["pyright"].setup({
 			capabilities = capabilities,
 			handlers = handlers,
-			cmd = { "dotnet", "C:/Users/dbili/AppData/Local/nvim-data/mason/packages/omnisharp/libexec/OmniSharp.dll" },
 		})
 	end,
 }

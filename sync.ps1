@@ -3,9 +3,6 @@ z conf
 cp -r -fo ~\AppData\Roaming\lsd .
 echo "$([char] 27)[92m 󰸞 $([char] 27)[0m lsd" 
 
-cp -r -fo ~\.config\neofetch .
-echo "$([char] 27)[92m 󰸞 $([char] 27)[0m neofetch" 
-
 cp -r -fo ~\AppData\Local\nvim .
 echo "$([char] 27)[92m 󰸞 $([char] 27)[0m nvim" 
 

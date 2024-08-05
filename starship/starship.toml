@@ -12,6 +12,7 @@ $python\
 $nodejs\
 $dotnet\
 $fill\
+$cmd_duration\
 $git_state\
 $username\
 $line_break\
@@ -51,7 +52,7 @@ truncation_length = 8
 truncation_symbol = '…'
 format = """
 [](#83a598)\
-[󰘬 ](fg:#282828 bg:#83a598)\
+[ ](fg:#282828 bg:#83a598)\
 [ $branch](fg:#83a598 bg:#32302f)\
 """
 only_attached = false
@@ -62,7 +63,7 @@ disabled = false
 commit_hash_length = 7
 format = """
 [](#83a598)\
-[󰜘 ](fg:#282828 bg:#83a598)\
+[ ](fg:#282828 bg:#83a598)\
 [ $hash](fg:#83a598 bg:#32302f)\
 """
 only_detached = true
@@ -102,7 +103,7 @@ format = '[󰌠 $version $virtualenv](#a89984) '
 
 
 [nodejs]
-format = '[ $version](#a89984) '
+format = '[ $version](#a89984) '
 
 
 [dotnet]
@@ -111,6 +112,16 @@ format = '[󰪮 $version](#a89984) '
 
 [fill]
 symbol = ' '
+
+
+[cmd_duration]
+min_time = 1000
+format = """
+[](#fabd2f)\
+[ ](fg:#282828 bg:#fabd2f)\
+[ $duration](fg:#fabd2f bg:#32302f)\
+[](#32302f) \
+"""
 
 
 [git_state]
@@ -144,3 +155,4 @@ show_always = false
 [character]
 success_symbol = '[](#bdae93)'
 error_symbol = '[](#bdae93)'
+vimcmd_symbol = '[](#bdae93)'

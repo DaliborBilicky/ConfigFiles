@@ -1,3 +1,4 @@
+vim.opt.spelllang = "en_us"
 vim.opt.spell = true
 vim.opt.background = "dark"
 vim.opt.signcolumn = "yes"

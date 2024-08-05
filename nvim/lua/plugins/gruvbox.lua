@@ -4,7 +4,7 @@ return {
 	config = function()
 		require("gruvbox").setup({
 			terminal_colors = true,
-			undercurl = true,
+			undercurl = false,
 			underline = true,
 			bold = true,
 			italic = {},
@@ -17,6 +17,14 @@ return {
 			contrast = "",
 			palette_overrides = { light0 = "#ebdbb2" },
 			overrides = {
+				GruvboxRedUnderline = { underline = true, sp = "#fb4934" },
+				GruvboxGreenUnderline = { underline = true, sp = "#b8bb26" },
+				GruvboxYellowUnderline = { underline = true, sp = "#fabd2f" },
+				GruvboxBlueUnderline = { underline = true, sp = "#83a598" },
+				GruvboxPurpleUnderline = { underline = true, sp = "#d3869b" },
+				GruvboxAquaUnderline = { underline = true, sp = "#8ec07c" },
+				GruvboxOrangeUnderline = { underline = true, sp = "#fe8019" },
+
 				FloatBorder = { fg = "#928374" },
 
 				TelescopePromptPrefix = { fg = "#7c6f64" },
@@ -59,6 +67,6 @@ return {
 			dim_inactive = false,
 			transparent_mode = true,
 		})
-		vim.cmd("colorscheme gruvbox")
+		vim.cmd.colorscheme("gruvbox")
 	end,
 }

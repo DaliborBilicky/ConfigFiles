@@ -6,25 +6,10 @@
         {
             "command": 
             {
-                "action": "globalSummon"
-            },
-            "keys": "win+`"
-        },
-        {
-            "command": 
-            {
-                "action": "newWindow",
-                "profile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}"
-            },
-            "keys": "alt+n"
-        },
-        {
-            "command": 
-            {
                 "action": "switchToTab",
-                "index": 0
+                "index": 7
             },
-            "keys": "alt+1"
+            "keys": "alt+8"
         },
         {
             "command": 
@@ -175,12 +160,31 @@
             "keys": "win+ctrl+alt+7"
         },
         {
+            "command": "unbound",
+            "keys": "win+;"
+        },
+        {
             "command": 
             {
                 "action": "switchToTab",
-                "index": 7
+                "index": 0
             },
-            "keys": "alt+8"
+            "keys": "alt+1"
+        },
+        {
+            "command": 
+            {
+                "action": "globalSummon"
+            },
+            "keys": "win+`"
+        },
+        {
+            "command": 
+            {
+                "action": "newWindow",
+                "profile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}"
+            },
+            "keys": "alt+n"
         },
         {
             "command": "closePane",
@@ -204,16 +208,16 @@
         {
             "command": 
             {
-                "action": "commandPalette"
+                "action": "newTab"
             },
-            "keys": "alt+p"
+            "keys": "alt+t"
         },
         {
             "command": 
             {
-                "action": "newTab"
+                "action": "commandPalette"
             },
-            "keys": "alt+t"
+            "keys": "alt+p"
         },
         {
             "command": "resetFontSize",
@@ -386,7 +390,7 @@
     "disableAnimations": true,
     "initialCols": 125,
     "initialPosition": ",",
-    "initialRows": 29,
+    "initialRows": 30,
     "launchMode": "focus",
     "minimizeToNotificationArea": true,
     "newTabMenu": 
@@ -475,15 +479,14 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "colorScheme": "Gruvbox Dark",
-                "guid": "{e2426ce6-5bcb-584f-b82e-e1fbb1c4e14b}",
-                "hidden": false,
+                "guid": "{41983ee8-d747-59dc-b218-03ffd35b4cc2}",
+                "hidden": true,
                 "name": "Developer Command Prompt for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{4b678b9b-2709-5ef8-98de-dbd00442c28a}",
-                "hidden": false,
+                "guid": "{f0485161-ed94-5ac2-889d-15d3788c5d61}",
+                "hidden": true,
                 "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
             }
